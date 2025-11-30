@@ -1,0 +1,22 @@
+# LaTeX auxiliary files
+*.aux
+*.log
+*.out
+*.toc
+*.bbl
+*.blg
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+
+# Generated PDF (comment out if you want to track it)
+# criticality-paper.pdf
+
+# Editor backup files
+*~
+*.swp
+*.bak
+
+# OS files
+.DS_Store
+Thumbs.db
