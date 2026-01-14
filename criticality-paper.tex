@@ -48,7 +48,7 @@ Techniques for detecting critical phenomena---phase transitions where correlatio
 
 Citation analysis reveals minimal cross-domain awareness during the formative period (1987--2010): researchers in biomedicine, finance, machine learning, power systems, and traffic flow developed equivalent techniques independently, each with distinct notation and terminology. We present Metron Dynamics, a framework derived from distributed systems engineering, as a candidate ninth independent discovery---strengthening the convergence pattern while acknowledging that as authors of both the framework and this analysis, external validation would strengthen this claim.
 
-Correspondence testing on the 2D Ising model confirms that measures from multiple frameworks correctly identify the critical regime at $T_c = 2.269$. We argue that repeated independent discovery establishes criticality mathematics as fundamental public knowledge, with implications for cross-disciplinary education and research accessibility.
+Correspondence testing on the 2D Ising model confirms that measures from multiple frameworks correctly identify the critical regime at $T_c = 2.269$. We argue that repeated independent discovery establishes criticality mathematics as fundamental public knowledge, with implications for cross-disciplinary education and research accessibility. Because these findings affect fields beyond mathematics and physics, we include a plain-language summary in Appendix B for non-specialist readers.
 \end{abstract}
 
 \noindent\textbf{Keywords:} critical phenomena, phase transitions, correlation analysis, self-organized criticality, detrended fluctuation analysis, Hurst exponent, edge of chaos
@@ -263,9 +263,9 @@ The operators $A$, $B$, $C$ were designed to (1) extract relational structure, (
 
 We present Metron Dynamics as a candidate ninth independent discovery of criticality mathematics, strengthening the convergence thesis presented in this paper. We acknowledge that as authors of both the framework and this analysis, external validation of independence would strengthen this claim.
 
-\subsubsection{Experimental Validation}
+\subsubsection{Correspondence Demonstration}
 
-To demonstrate correspondence between Metron Dynamics parameters and established criticality measures, we tested whether $\kappa_m$ candidates---mapped to standard observables---successfully identify known critical points. Using the 2D Ising model with exact critical temperature $T_c = 2.269$ (Onsager 1944):
+To demonstrate correspondence between Metron Dynamics parameters and established criticality measures, we mapped $\kappa_m$ candidates to standard observables and verified alignment at known critical points. Note: this demonstrates correspondence, not independent validation---direct computation of $\kappa_m = \rho(J_M)$ from the $M$ operator's Jacobian remains future work. Using the 2D Ising model with exact critical temperature $T_c = 2.269$ (Onsager 1944):
 
 \textbf{Test methodology:} Compute three $\kappa_m$ candidates across temperature range $T \in \{2.0, 2.1, 2.2, 2.269, 2.3, 2.4, 2.5\}$:
 \begin{itemize}[nosep]
@@ -274,13 +274,13 @@ To demonstrate correspondence between Metron Dynamics parameters and established
     \item $\kappa_{m,\text{composite}} = \sqrt{\xi\tau}$
 \end{itemize}
 
-\textbf{Result:} All three $\kappa_m$ measures peak at $T = 2.269$ (0\% error), successfully detecting the critical point.
+\textbf{Result:} All three $\kappa_m$ measures peak at $T = 2.269$, correctly identifying the critical point.
 
 \textbf{Critical slowing down:} Temporal correlation $\tau$ increases from 1.34 to 18.60 at $T_c$ ($14\times$ increase), demonstrating the signature divergence that Metron Dynamics captures through $\kappa_m$.
 
-\textbf{Interpretation:} The correspondence confirms that Metron Dynamics' $\kappa_m$ formulation captures the same critical signatures as established techniques when mapped to standard observables. Detailed methodology and full results provided in Appendix A.
+\textbf{Interpretation:} This correspondence demonstrates that Metron Dynamics' $\kappa_m$ formulation aligns with established criticality measures when mapped to standard observables. Detailed methodology and full results provided in Appendix A.
 
-\textit{Future work:} The present validation maps $\kappa_m$ candidates to established observables ($\xi$, $\tau$). Direct computation of $\kappa_m = \rho(J_M)$ from the $M$ operator's Jacobian matrix, and verification that this spectral radius exhibits the same critical behavior, remains for future investigation.
+\textit{Future work:} The present demonstration maps $\kappa_m$ candidates to established observables ($\xi$, $\tau$). Direct computation of $\kappa_m = \rho(J_M)$ from the $M$ operator's Jacobian matrix---verifying that this spectral radius exhibits the same critical behavior independently---remains for future investigation.
 
 \subsubsection{Implications}
 
@@ -504,18 +504,18 @@ Several caveats apply to this analysis. First, the functional equivalence we doc
 \newpage
 \appendix
 
-\section{Metron Dynamics Correspondence Test}
+\section{Metron Dynamics Correspondence Demonstration}
 
 \subsection{Framework Overview}
 
-The Metron Dynamics framework characterizes criticality through the contraction factor $\kappa_m$, which measures how strongly the system's relational operator contracts perturbations. We propose three $\kappa_m$ candidates:
+The Metron Dynamics framework characterizes criticality through the contraction factor $\kappa_m$, which measures how strongly the system's relational operator contracts perturbations. To demonstrate correspondence with established criticality measures, we map three $\kappa_m$ candidates to standard observables:
 \begin{itemize}
     \item $\kappa_{m,\text{spatial}}$ based on correlation length $\xi$
     \item $\kappa_{m,\text{temporal}}$ based on autocorrelation time $\tau$
     \item $\kappa_{m,\text{composite}} = \sqrt{\xi\tau}$
 \end{itemize}
 
-\textbf{Test hypothesis:} Do these $\kappa_m$ candidates peak at known critical points?
+\textbf{Correspondence question:} Do these $\kappa_m$ candidates, mapped to standard observables, peak at known critical points?
 
 \subsection{Experimental Design}
 
@@ -558,7 +558,7 @@ The Metron Dynamics framework characterizes criticality through the contraction 
     \item $\kappa_{m,\text{composite}}$ peaks at $T = 2.269$ (correctly identifies critical point)
 \end{itemize}
 
-\textbf{Result:} \checkmark\ All three $\kappa_m$ candidates successfully detect the critical point.
+\textbf{Result:} \checkmark\ All three $\kappa_m$ candidates correctly identify the critical point when mapped to standard observables.
 
 \subsection{Key Observation: Critical Slowing Down}
 
@@ -566,14 +566,14 @@ The temporal correlation $\tau$ increases from 1.34 to 18.60 at $T_c$ ($14\times
 
 \subsection{Interpretation}
 
-The $\kappa_m$ candidates, mapped to standard observables, detect critical points through:
+The $\kappa_m$ candidates, mapped to standard observables, align with critical points through:
 \begin{enumerate}
     \item Diverging spatial correlations ($\xi$)
     \item Diverging temporal correlations ($\tau$)
     \item Combined signal ($\sqrt{\xi\tau}$)
 \end{enumerate}
 
-This demonstrates correspondence between Metron Dynamics' $\kappa_m$ formulation and established criticality measures, confirming that the framework captures equivalent critical signatures when mapped to standard observables.
+This demonstrates correspondence between Metron Dynamics' $\kappa_m$ formulation and established criticality measures. Note that this mapping confirms alignment, not independent validation---direct computation of $\kappa_m = \rho(J_M)$ from the $M$ operator's Jacobian, applied to physical systems, remains future work.
 
 \section*{Acknowledgments}
 
@@ -592,7 +592,7 @@ That's essentially what happened with the mathematics in this paper.
 
 \subsection*{The Core Discovery}
 
-Scientists across eight fields---physics, biology, computer science, finance, traffic engineering, and more---independently invented the same mathematical tools for understanding when systems are about to change dramatically, mostly without knowing about each other's work (1935--2025).
+Scientists across multiple fields---physics, biology, computer science, finance, traffic engineering, and more---independently developed equivalent mathematical tools for understanding when systems are about to change dramatically, largely without awareness of each other's work (1935--2025). Some represent true independent derivation; others recognized that existing techniques applied to new domains. Both contribute to a striking convergence pattern.
 
 The math predicts critical points: moments when small changes cause huge effects. Water turning to ice, a match starting a forest fire, a traffic jam forming suddenly.
 
@@ -626,11 +626,11 @@ The math is already out there, already invented multiple times. We're just argui
 
 \subsection*{Technical Readers}
 
-For those with mathematical background: Section 2 documents the cross-domain discoveries, Section 3 establishes mathematical equivalence, Section 4 analyzes the convergence pattern, and Appendix A provides experimental validation on the 2D Ising model. The core insight is that diverging correlation length $\xi \to \infty$ (physics), scaling exponent $\alpha \to 1$ (DFA), Hurst exponent $H \to 1$ (finance), and spectral radius $\chi \to 1$ (neural networks) are measuring the same underlying criticality via different observables.
+For those with mathematical background: Section 2 documents the cross-domain discoveries, Section 3 establishes mathematical equivalence, Section 4 analyzes the convergence pattern, and Appendix A provides a correspondence demonstration on the 2D Ising model. The core insight is that diverging correlation length $\xi \to \infty$ (physics), scaling exponent $\alpha \to 1$ (DFA), Hurst exponent $H \to 1$ (finance), and spectral radius $\chi \to 1$ (neural networks) are measuring the same underlying criticality via different observables.
 
 \subsection*{Why We Wrote This}
 
-One of us (Robin Macomber) independently invented this mathematics in 2024 while working on distributed systems engineering --- making him the ninth independent inventor. When we realized the pattern of repeated independent discovery, it became clear this isn't just another engineering paper. It's evidence that these mathematical insights are fundamental, and they deserve to be treated as such.
+One of us (Robin Macomber) independently derived this mathematics in 2024 while working on distributed systems engineering---a candidate ninth independent discovery. When we recognized the pattern of repeated convergence across disciplines, it became clear this isn't just another engineering paper. It's evidence that these mathematical insights are fundamental, and they deserve to be treated as such. (We acknowledge that as authors of both the framework and this analysis, external validation would strengthen the independence claim.)
 
 \subsection*{Questions This Appendix Answers}
 
@@ -648,11 +648,11 @@ A: Yes. The math was never truly ``owned''---it's been independently discovered 
 
 \subsection*{For Students and Educators}
 
-If you're teaching courses in complexity science, systems engineering, data analysis, or related fields, this paper provides a unified framework for critical phenomena mathematics that works across domains. The experimental validation (Appendix A) shows these aren't just metaphors---the math genuinely converges to the same answers regardless of which field's notation you use.
+If you're teaching courses in complexity science, systems engineering, data analysis, or related fields, this paper provides a unified framework for critical phenomena mathematics that works across domains. The correspondence demonstration (Appendix A) shows these aren't just metaphors---the math genuinely converges to the same answers regardless of which field's notation you use.
 
 \subsection*{The Bottom Line}
 
-\textbf{Free the Math} means recognizing that some mathematical insights are too fundamental to belong to any single discipline. This paper documents one such case: critical phenomena mathematics, independently invented at least nine times across eight decades.
+\textbf{Free the Math} means recognizing that some mathematical insights are too fundamental to belong to any single discipline. This paper documents one such case: critical phenomena mathematics, independently developed or rediscovered multiple times across nine decades.
 
 The math works. It's useful. It's fundamental.
 
