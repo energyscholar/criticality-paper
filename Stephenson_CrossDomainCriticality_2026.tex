@@ -73,13 +73,7 @@ Statistical physics established the mathematical framework between 1944 and 1971
 
 Why did it take 15--50 years for equivalent techniques to appear elsewhere? The most parsimonious explanation is natural convergence: as complexity science, biomedicine, finance, and machine learning matured during the 1980s--2000s, researchers confronting correlation problems derived similar mathematics from first principles. Disciplinary barriers compound this---a physicist's ``correlation length'' and a financial analyst's ``Hurst exponent'' look like different things even when they measure the same quantity. A third possibility, deliberate compartmentalization driven by the predictive power of these techniques, finds limited support in our analysis but cannot be excluded.
 
-The distinction carries weight. If these techniques represent convergent discovery, they are fundamental mathematics. If restriction played a role, ethical questions arise about delayed dissemination of analytical tools with direct welfare implications.
-
-\subsection{Significance}
-
-If these techniques represent convergent discovery, they should be recognized as universal mathematics belonging to no single institution---derived across disciplines and continents over nine decades (1935--2025).
-
-The practical stakes are concrete: critical slowing down enables predictive modeling of system transitions, correlation scaling reveals approaching phase transitions, and systems can be designed to operate at criticality for optimal performance. Medical applications (cardiac dysfunction detection) and safety systems (power grids, traffic) have direct welfare implications.
+If these techniques represent convergent discovery, they are universal mathematics belonging to no single institution---derived across disciplines and continents over nine decades (1935--2025). If restriction played a role, ethical questions arise about delayed dissemination of analytical tools with direct welfare implications. The practical stakes reinforce both readings: critical slowing down enables predictive modeling of system transitions, correlation scaling reveals approaching phase transitions, and medical applications (cardiac dysfunction detection) and safety systems (power grids, traffic) carry direct welfare implications.
 
 \section{Cross-Domain Discoveries}
 
@@ -89,11 +83,11 @@ Onsager's exact solution to the 2D Ising model \cite{onsager1944} identified the
 
 \subsection{Complexity Science (1987-1993)}
 
-In 1987, Bak, Tang, and Wiesenfeld introduced self-organized criticality (SOC) through their sandpile model \cite{bak1987}. Complex systems spontaneously evolve toward critical states without requiring external tuning. Avalanche sizes follow power laws $P(s) \sim s^{-\tau}$---mathematically equivalent to correlation scaling in physics.
+The connection to statistical mechanics is direct. In 1987, Bak, Tang, and Wiesenfeld introduced self-organized criticality (SOC) through their sandpile model \cite{bak1987}, showing that complex systems spontaneously evolve toward critical states without requiring external tuning. Avalanche sizes follow power laws $P(s) \sim s^{-\tau}$---the same divergence of correlation structure that characterizes continuous phase transitions.
 
-The sandpile exhibits $1/f$ noise, a hallmark of criticality where power spectral density $S(f) \sim 1/f^\alpha$. Long-range correlations persist across timescales, just as $\xi$ and $\tau$ diverge at critical points.
+The sandpile exhibits $1/f$ noise, a hallmark of criticality where power spectral density $S(f) \sim 1/f^\alpha$. Long-range correlations persist across timescales, with $\xi$ and $\tau$ diverging at critical points.
 
-Kauffman's 1993 ``Origins of Order'' \cite{kauffman1993} identified the edge of chaos in Boolean networks. Networks with average connectivity $K$ fall into three regimes: ordered ($K < 2$), critical ($K \approx 2$), chaotic ($K > 2$). Maximal computational capability occurs at $K = 2$, where correlation length diverges---$K$ tunes the system through a phase transition just as temperature does in the Ising model.
+Kauffman's 1993 ``Origins of Order'' \cite{kauffman1993} identified the edge of chaos in Boolean networks. Networks with average connectivity $K$ fall into three regimes: ordered ($K < 2$), critical ($K \approx 2$), chaotic ($K > 2$). Maximal computational capability occurs at $K = 2$, where correlation length diverges---$K$ serves as a tuning parameter through the transition, analogous to temperature in thermal systems.
 
 \subsection{Biomedical/HRV Analysis (1994)}
 
@@ -123,7 +117,7 @@ where $R$ is the range of cumulative deviations and $S$ is standard deviation ov
     \item $H \approx 1.0 \Longrightarrow$ critical regime (long-range correlation)
 \end{itemize}
 
-Real markets typically show $H \approx 0.7$--$0.8$. During market stress, $H$ approaches 1.0---the critical value indicating diverging correlation length, analogous to $\xi \to \infty$ at phase transitions.
+Real markets typically show $H \approx 0.7$--$0.8$. During market stress, $H$ approaches 1.0---indicating diverging correlation length and the onset of collective behavior across otherwise independent market participants.
 
 Mantegna and Stanley (1995) \cite{mantegna1995} demonstrated power law distributions in stock returns, linking econophysics to statistical mechanics: $P(\Delta x) \sim |\Delta x|^{-\alpha}$. Sornette (2003) \cite{sornette2003} further developed this framework, showing how log-periodic oscillations in financial time series can predict critical transitions such as market crashes.
 
@@ -145,13 +139,13 @@ At $\chi \approx 1$, networks achieve maximum computational capability through c
 
 Saxe et al.\ (2013) \cite{saxe2013} extended this to deep feedforward networks, showing that optimal weight initialization requires operating near the order-chaos boundary. Information propagates through layers most effectively at criticality; away from it, signals either attenuate or diverge.
 
-Batch normalization and ``critical learning periods'' both function to maintain criticality throughout training. This amounts to an independent rediscovery of Kauffman's principle---complex systems operate optimally at $K = 2$---arrived at from a different direction entirely.
+Batch normalization and ``critical learning periods'' both function to maintain criticality throughout training. ML practitioners arrived at this principle empirically, without reference to Kauffman's Boolean network analysis or the SOC literature---a case where engineering practice converged on the same operating regime that theory had identified years earlier.
 
 \subsection{Power Grid Analysis (2000s-2010s)}
 
 Power grid engineers arrived at critical phenomena mathematics through a different door: cascade failure analysis. Crucitti et al.\ (2004) \cite{crucitti2004} showed that blackout cascades exhibit self-organized criticality, with blackout sizes following power laws $P(s) \sim s^{-\alpha}$. Dobson et al.\ (2007) \cite{dobson2007} went further, demonstrating that grids naturally evolve toward critical operating points as demand increases and margins shrink.
 
-The key observable is generator coherence. As load approaches the critical threshold, distant generators become increasingly synchronized---spatial correlation $\xi$ grows, just as in magnetic systems near $T_c$. Engineers developed early warning indicators from this: system recovery time $\tau$ increases as criticality approaches, a direct application of critical slowing down.
+The key observable is generator coherence. As load approaches the critical threshold, distant generators become increasingly synchronized---spatial correlation $\xi$ grows. Engineers developed early warning indicators from this: system recovery time $\tau$ increases as criticality approaches, a direct application of critical slowing down.
 
 \subsection{Traffic Flow (1935, 2010s)}
 
@@ -166,7 +160,7 @@ Kerner's three-phase model (2004) \cite{kerner2004} formalized this as a genuine
 
 Near $\rho_c$, jam sizes follow power laws $P(s) \sim s^{-\tau}$, similar to sandpile avalanches. The critical point shows diverging correlation length---disturbances propagate arbitrarily far upstream.
 
-Capacity peaks at $\rho = \rho_c$, and travel time variance diverges as the critical density is approached---the same structure seen at $K = 2$ in Boolean networks and $\chi = 1$ in neural networks.
+Capacity peaks at $\rho = \rho_c$, and travel time variance diverges as the critical density is approached. The three-regime structure and diverging correlation length recur here without any methodological borrowing from the fields that formalized them first.
 
 \subsection{Metatron Dynamics (2024-2025)}
 
@@ -372,17 +366,13 @@ Table~\ref{tab:timeline} shows the discovery timeline:
 \end{tabular}
 \end{table}
 
-Key features:
+The timeline divides into four phases. Physics establishes the framework between 1944 and 1971---widely celebrated, publicly available science.
 
-\textbf{Foundation (1944-1971):} Physics establishes the framework. Widely celebrated, publicly available.
+Then a burst: between 1987 and 1994, at least four domains produce independent formulations. Peng et al.\ (1994) and Peters (1994) publish in the same year without cross-citation. This clustering coincides with increased computational capacity, which made DFA, Hurst analysis, and spectral methods tractable for large datasets.
 
-\textbf{Acceleration (1987-1994):} Burst of discoveries in seven years. Peng et al. (1994) and Peters (1994) publish the same year without cross-citation. Clustering coincides with increased computational capacity.
+\textbf{Steady expansion (2001--2013).} ML and engineering develop their own criticality methods. The 20-year gap between Kauffman (1993) and Saxe et al.\ (2013)---both analyzing neural computation---supports independent derivation rather than transfer.
 
-\textbf{Steady expansion (2001-2013):} ML and engineering develop criticality methods. The 20-year gap between Kauffman (1993) and Saxe et al. (2013)---both analyzing neural computation---supports independent derivation.
-
-\textbf{Recent synthesis (2010s+):} Cross-domain awareness emerges.
-
-The 1990s clustering likely reflects (a) fields reaching analytical maturity and (b) computational capacity enabling correlation analysis. We find limited evidence for coordinated dissemination.
+Cross-domain awareness begins to emerge only in the 2010s. The 1990s clustering likely reflects fields reaching analytical maturity and gaining computational tools simultaneously; we find limited evidence for coordinated dissemination.
 
 \subsection{Natural Convergence vs. Seeded Knowledge}
 
@@ -406,13 +396,7 @@ The absence of cross-domain citations supports independent derivation---research
 
 Independent discovery of equivalent mathematics is not unprecedented. Newton and Leibniz invented calculus independently. Wallace and Darwin independently developed natural selection. When researchers confront similar problems, convergence is expected.
 
-Why criticality mathematics is particularly likely to converge:
-
-\textbf{Universal phenomenon:} Any complex system with interacting components can exhibit phase transitions. Researchers studying heart dynamics, market crashes, or traffic jams inevitably encounter correlation structure near critical points.
-
-\textbf{Limited solution space:} Only so many ways to quantify ``correlations decay slowly vs. quickly.'' All approaches count how far correlations extend.
-
-\textbf{Computational enabling:} 1990s computational capacity made DFA, Hurst analysis, and spectral radius tractable for large datasets. Multiple fields gained tools simultaneously.
+Several features of criticality mathematics make convergence particularly likely. Any complex system with interacting components can exhibit phase transitions, so researchers studying heart dynamics, market crashes, or traffic jams inevitably encounter correlation structure near critical points. The solution space is constrained: there are only so many ways to quantify whether correlations decay slowly or quickly, and all approaches ultimately count how far correlations extend. Finally, 1990s computational capacity made DFA, Hurst analysis, and spectral methods tractable for large datasets---multiple fields gained the necessary tools at roughly the same time.
 
 Correlation scaling emerges for critical transitions much as Fourier analysis emerges for periodic signals---the mathematics is dictated by the structure of the problem.
 
@@ -428,15 +412,11 @@ Practical consequence: insights transfer across domains. A power grid engineer c
 
 \subsection{Knowledge Accessibility}
 
-We argue this mathematics should be recognized as \textbf{fundamental public knowledge}. Multiple independent discoveries across decades, derivability from first principles, peer-reviewed publication in at least eight domains---no single party can reasonably claim exclusive ownership of techniques this many communities arrived at independently.
+The evidence presented here suggests that criticality mathematics constitutes fundamental public knowledge. Multiple independent discoveries across decades, derivability from first principles, and peer-reviewed publication in at least eight domains collectively weaken any claim of exclusive ownership over techniques this many communities arrived at independently.
 
 \subsection{Ethical Considerations}
 
-Under the natural convergence interpretation (which we consider most likely), independent researchers across cultures arrived at equivalent insights, and no institution can reasonably claim ownership. The ethical implication is straightforward: freely accessible.
-
-But even under the less likely seeding hypothesis, the ethical case strengthens rather than weakens. If cross-domain awareness of DFA was delayed, cardiac dysfunction detection tools reached clinicians later than they might have. If critical slowing down indicators were compartmentalized, power grid safety improvements lagged. A two-tier knowledge system---whatever its origin---violates open science principles.
-
-Either way, documenting convergence establishes the public domain status of these techniques.
+Under either interpretation---natural convergence or partial seeding---the conclusion is the same. Independent derivation across cultures and decades means no institution can reasonably claim ownership, and delayed cross-domain awareness (whether accidental or otherwise) has concrete costs: cardiac dysfunction detection tools, power grid safety indicators, and financial early warning systems all reached practitioners later than unified awareness would have allowed. Documenting the convergence pattern is itself a step toward the accessibility these techniques warrant.
 
 \subsection{Future Directions}
 
@@ -536,7 +516,7 @@ This work was prepared with assistance from Claude Code (Anthropic), which aided
 
 \subsection*{What This Paper Is About}
 
-Nine groups of researchers, working in different fields over nine decades, independently arrived at the same mathematics---without talking to each other. This paper documents that pattern and asks what it means.
+Imagine nine card players at separate tables, each inventing the same game without seeing each other's hands. That is roughly what happened here: nine groups of researchers, working in different fields over nine decades, independently arrived at the same mathematics---without talking to each other. This paper documents that pattern and asks what it means.
 
 \subsection*{The Core Discovery}
 
@@ -597,10 +577,6 @@ If you're teaching courses in complexity science, systems engineering, data anal
 
 \subsection*{The Bottom Line}
 
-\textbf{Free the Math} means recognizing that some mathematical insights are too fundamental to belong to any single discipline. This paper documents one such case: critical phenomena mathematics, independently developed or rediscovered multiple times across nine decades.
-
-The math works. It's useful. It's fundamental.
-
-Now it should be free.
+When nine separate research communities derive the same mathematics over nine decades, the result belongs to none of them individually. This paper documents that convergence for critical phenomena mathematics and argues for treating it the way we treat calculus: as shared intellectual infrastructure, accessible across every field that needs it.
 
 \end{document}
