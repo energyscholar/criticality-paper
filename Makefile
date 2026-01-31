@@ -1,7 +1,7 @@
 # Makefile for building criticality-paper.pdf
 
 # Main target
-MAIN = criticality-paper
+MAIN = Stephenson_CrossDomainCriticality_2026
 
 # Commands
 LATEX = pdflatex
