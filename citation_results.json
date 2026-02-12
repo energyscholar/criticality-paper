@@ -1,0 +1,137 @@
+{
+  "seed_papers_analyzed": 10,
+  "per_paper": [
+    {
+      "label": "Bak et al. 1987",
+      "domain": "Physics",
+      "total_retrieved": 853,
+      "total_cited": 853,
+      "cross_domain": 357
+    },
+    {
+      "label": "Peng et al. 1994",
+      "domain": "Biomedical",
+      "total_retrieved": 2000,
+      "total_cited": 4550,
+      "cross_domain": 1001
+    },
+    {
+      "label": "Crucitti et al. 2004",
+      "domain": "Engineering",
+      "total_retrieved": 1089,
+      "total_cited": 1089,
+      "cross_domain": 753
+    },
+    {
+      "label": "Dobson et al. 2007",
+      "domain": "Engineering",
+      "total_retrieved": 935,
+      "total_cited": 935,
+      "cross_domain": 570
+    },
+    {
+      "label": "Mantegna & Stanley 1995",
+      "domain": "Finance",
+      "total_retrieved": 1637,
+      "total_cited": 1637,
+      "cross_domain": 812
+    },
+    {
+      "label": "Saxe et al. 2013",
+      "domain": "CS/ML",
+      "total_retrieved": 1981,
+      "total_cited": 1981,
+      "cross_domain": 105
+    },
+    {
+      "label": "Kauffman 1993",
+      "domain": "Biology",
+      "total_retrieved": 2000,
+      "total_cited": 8091,
+      "cross_domain": 1874
+    },
+    {
+      "label": "Jaeger 2001",
+      "domain": "CS/ML",
+      "total_retrieved": 2000,
+      "total_cited": 3021,
+      "cross_domain": 331
+    },
+    {
+      "label": "Sornette 2004",
+      "domain": "Physics",
+      "total_retrieved": 628,
+      "total_cited": 629,
+      "cross_domain": 186
+    },
+    {
+      "label": "Peters 1994",
+      "domain": "Finance",
+      "total_retrieved": 1034,
+      "total_cited": 1034,
+      "cross_domain": 433
+    }
+  ],
+  "periods": {
+    "1987--2000": {
+      "total": 287,
+      "same": 164,
+      "cross": 123,
+      "obs_rate": 0.4286,
+      "exp_rate": 0.679,
+      "chi2": 82.56,
+      "p_value": 0.0,
+      "domain_counts": {
+        "Physics": 113,
+        "CS/ML": 33,
+        "Finance": 110,
+        "Biomedical": 21,
+        "Engineering": 6,
+        "Other": 2,
+        "Social Science": 2
+      }
+    },
+    "2001--2010": {
+      "total": 1500,
+      "same": 740,
+      "cross": 760,
+      "obs_rate": 0.5067,
+      "exp_rate": 0.764,
+      "chi2": 551.18,
+      "p_value": 0.0,
+      "domain_counts": {
+        "Biomedical": 120,
+        "CS/ML": 353,
+        "Physics": 457,
+        "Engineering": 113,
+        "Finance": 411,
+        "Other": 35,
+        "Social Science": 11
+      }
+    },
+    "2011--2025": {
+      "total": 10664,
+      "same": 5143,
+      "cross": 5521,
+      "obs_rate": 0.5177,
+      "exp_rate": 0.6413,
+      "chi2": 708.12,
+      "p_value": 0.0,
+      "domain_counts": {
+        "CS/ML": 5943,
+        "Biomedical": 1538,
+        "Physics": 1286,
+        "Finance": 1075,
+        "Social Science": 199,
+        "Other": 135,
+        "Engineering": 488
+      }
+    }
+  },
+  "api_notes": [
+    "Peng et al. 1994: 4550 total citations, sampled first 2000",
+    "Kauffman 1993: 8091 total citations, sampled first 2000",
+    "Jaeger 2001: 3021 total citations, sampled first 2000"
+  ],
+  "latex_table": "\\begin{table}[h]\n\\centering\n\\caption{Cross-domain citation rates by period (Semantic Scholar API, \\today)}\n\\label{tab:citations}\n\\begin{tabular}{lrrrrl}\n\\toprule\n\\textbf{Period} & \\textbf{N} & \\textbf{Obs.\\ cross-domain} & \\textbf{Expected} & $\\chi^2$ & $p$ \\\\\n\\midrule\n1987--2000 & 287 & 42.9% & 67.9% & 82.6 & $<$0.0001 \\\\\n2001--2010 & 1500 & 50.7% & 76.4% & 551.2 & $<$0.0001 \\\\\n2011--2025 & 10664 & 51.8% & 64.1% & 708.1 & $<$0.0001 \\\\\n\\bottomrule\n\\end{tabular}\n\\end{table}"
+}

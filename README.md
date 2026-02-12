@@ -2,12 +2,27 @@
 
 This directory contains the LaTeX source files for the paper "Convergent Discovery of Critical Phenomena Mathematics Across Disciplines: A Cross-Domain Analysis" by Bruce Stephenson and Robin Macomber.
 
+## arXiv Publication
+
+- **arXiv ID:** [2601.22389](https://arxiv.org/abs/2601.22389)
+- **Primary Category:** physics.soc-ph
+- **Cross-list Groups:** physics, cs, q-bio
+- **Announced:** January 2026
+- **Author page:** http://arxiv.org/a/stephenson_b_2
+- **ORCID (Stephenson):** https://orcid.org/0009-0005-6842-6686
+- **arXiv version:** v2 live as of 2 Feb 2026
+- **v1 submitted:** 29 Jan 2026 (16kb)
+- **v2 posted:** 2 Feb 2026 (22kb)
+- **Categories:** physics.soc-ph, cond-mat.stat-mech
+- **MSC class:** 82B26, 82B27
+- **License:** CC BY 4.0
+- **Pages:** 17, no figures, plain-language summary in Appendix B
+
 ## Files
 
-- `criticality-paper.tex` - Main LaTeX source file
-- `criticality-paper.bib` - BibTeX bibliography file
+- `Stephenson_CrossDomainCriticality_2026.tex` - Main LaTeX source file
+- `Stephenson_CrossDomainCriticality_2026.bib` - BibTeX bibliography file
 - `Makefile` - Build automation
-- `FreeTheMath-QRR-PrePub.pdf` - Original PDF (preserved for reference)
 
 ## Prerequisites
 
