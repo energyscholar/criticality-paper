@@ -78,13 +78,14 @@ Our investigation was prompted by a specific case of apparent independent deriva
 \subsection{Definitions and Scope}
 \label{sec:definitions}
 
-To structure the evidence in Section~\ref{sec:discoveries}, we adopt three classification categories:
+To structure the evidence in Section~\ref{sec:discoveries}, we adopt five classification categories:
 
 \begin{description}[nosep,leftmargin=1em,labelindent=0em]
 \item[Independent derivation:] Mathematical framework developed from first principles within a domain, without demonstrable awareness of equivalent prior work in other fields.
 \item[Domain transfer:] Existing mathematical technique recognized as applicable to a new domain, with traceable methodological lineage.
 \item[Intra-field extension:] New phenomena identified using existing mathematical tools from within the same broad discipline, without crossing a disciplinary boundary.
 \item[Empirical precursor:] Empirical observation of critical-like behavior predating the formal mathematical framework, without explicit connection to criticality theory.
+\item[Foundational cross-domain contribution:] Development of a general mathematical framework (not domain-specific) whose concepts---scaling, self-similarity, power-law distributions---influenced multiple independent discovery lineages surveyed here.
 \end{description}
 
 \noindent We use ``qualified'' to indicate cases where the mathematical method itself is novel but the researcher's training or institutional context includes significant exposure to the relevant physics, creating a partial intellectual lineage that falls short of direct methodological borrowing.
@@ -103,7 +104,8 @@ Statistical Physics & Foundational framework & Established the mathematics \\
 SOC (Bak 1987) & Intra-physics extension & Physicist applying stat-mech \\
 Edge of Chaos (Kauffman) & Qualified independent & Biologist; SFI exposure \\
 Biomedical (DFA) & Qualified independent & Stanley's physics background \\
-Finance & Domain transfer & Applied existing technique \\
+Finance (Mandelbrot 1963) & Foundational cross-domain & Fractal geometry; scaling laws \\
+Finance (Peters 1994) & Domain transfer & Applied existing technique \\
 Machine Learning & Qualified independent & ESNs; edge-of-chaos circulating \\
 Neuroscience & Qualified independent & Beggs \& Plenz; cited Bak \\
 Power Grids & Independent derivation & Cascade failure analysis \\
@@ -153,12 +155,10 @@ F(n) &\sim n^\alpha \\
 
 \subsection{Financial Markets (1990s)}
 
-\noindent\textit{Classification: domain transfer. Mandelbrot (1963) applied Hurst's existing hydrology technique to financial data; Peters (1994) extended this application. The mathematics was not independently derived but recognized as applicable to a new domain.}
+\noindent\textit{Classification: Mandelbrot (1963)---foundational cross-domain contribution. Peters (1994)---domain transfer. Mandelbrot's 1963 analysis of speculative prices applied Hurst's R/S technique to financial data, but his broader contribution was fractal geometry as a framework for self-similar phenomena across scales and domains. His promotion of scaling laws and power-law distributions shaped the intellectual environment from which several later discoveries in this survey emerged---particularly through the statistical physics community (Stanley, Mantegna) that produced both econophysics and biomedical DFA. Peters extended this application using the Hurst exponent.}
 \smallskip
 
 Peters (1994) applied fractal analysis to financial markets using the Hurst exponent \cite{peters1994}. Originally developed by Hurst in the 1950s \cite{hurst1951} for Nile River hydrology, $H$ characterizes long-term memory in time series. Mandelbrot (1963) \cite{mandelbrot1963} first applied Hurst's R/S analysis to financial time series, establishing the connection between hydrology and market dynamics decades before Peters.
-
-Unlike DFA---derived independently for biomedical signals---Peters' contribution is recognizing that an existing technique applies to a new domain, not independent derivation of the mathematics. Both contribute to the convergence pattern, but differ in character.
 
 The Hurst exponent comes from rescaled range (R/S) analysis:
 \begin{equation}
@@ -284,7 +284,7 @@ None of these notation systems show terminological inheritance from each other--
 
 The surveyed discoveries span different countries, institutions, and funding ecosystems. Bak developed SOC at Brookhaven National Laboratory while Peng's group at Boston University created DFA for biomedical signals. Peters worked as an independent practitioner in finance; Jaeger introduced echo state networks at the University of Bremen. Crucitti's cascade failure analysis emerged from the University of Catania, and Dobson's power grid work from Iowa State. No common funding sources, advisory chains, or conference networks connected these researchers' criticality work during the formative period.
 
-The principal exception is the Boston University physics department under H.\ Eugene Stanley, whose group produced both DFA methodology \cite{peng1994dna} and early econophysics contributions \cite{mantegna1995}---hence our classification of DFA as ``qualified independent'' rather than fully independent. Stanley's dual involvement represents the closest link between any two domains in the formative period, and it concerns two of the domains surveyed.
+The principal exception is the Boston University physics department under H.\ Eugene Stanley, whose group produced both DFA methodology \cite{peng1994dna} and early econophysics contributions \cite{mantegna1995}, a lineage traceable in part to Mandelbrot's fractal framework---hence our classification of DFA as ``qualified independent'' rather than fully independent. Stanley's dual involvement represents the closest link between any two domains in the formative period, and it concerns two of the domains surveyed.
 
 Our review of conference programs from the 1990s reinforces the separation. Criticality in biomedicine was presented at cardiology and biomedical engineering venues; in finance at quantitative finance workshops; in ML at neural computation conferences; in traffic at transportation research meetings. Co-authorships bridging these domains appear only after 2010, consistent with post-maturation integration.
 
@@ -360,6 +360,7 @@ Table~\ref{tab:timeline} shows the discovery timeline:
 \midrule
 1935 & Traffic Flow & Greenshields \\
 1944 & Statistical Physics & Onsager \\
+1963 & Finance & Mandelbrot \\
 1966 & Statistical Physics & Kadanoff \\
 1971 & Statistical Physics & Wilson (Nobel 1982) \\
 1987 & Complexity Science & Bak, Tang, Wiesenfeld \\
