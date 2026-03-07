@@ -296,6 +296,17 @@ Each domain developed its own notation for the same underlying mathematics, with
 
 None of these notation systems show terminological inheritance from each other---a physicist would not recognize $\alpha$ as diagnosing the same critical regime as $\xi$ without careful analysis, nor would a financial analyst connect $H$ to $\chi$. This contrasts with deliberate transfer cases: Moore and Mertens (2011), applying phase transition theory to computational complexity, explicitly preserved the statistical mechanics language of ``order parameters'' and ``critical thresholds.'' Notation divergence is the expected signature of independent derivation; notation preservation signals knowledge transfer.
 
+The depth of terminological fragmentation becomes apparent by comparison with
+other mathematical convergences. The distinct notations that Leibniz and Newton
+developed for calculus eventually consolidated: ``derivative'' and ``integral''
+became standard vocabulary across every field that uses the underlying
+mathematics. No comparable consolidation has occurred for criticality. A
+cardiologist's ``scaling exponent,'' a hydrologist's ``Hurst exponent,'' and a
+machine learning researcher's ``spectral radius'' remain siloed terms for
+diagnostics that converge at the same critical boundary---and a practitioner
+moving between fields must learn each domain's vocabulary independently
+(cf.\ Bury, personal communication, 2026).
+
 \subsection{Institutional Separation}
 
 The surveyed discoveries span different countries, institutions, and funding ecosystems. Bak developed SOC at Brookhaven National Laboratory while Peng's group at Boston University created DFA for biomedical signals. Peters worked as an independent practitioner in finance; Jaeger introduced echo state networks at the University of Bremen. Crucitti's cascade failure analysis emerged from the University of Catania, and Dobson's power grid work from Iowa State. No common funding sources, advisory chains, or conference networks connected these researchers' criticality work during the formative period.
@@ -322,19 +333,21 @@ At criticality, these exponents approach values indicating long-range correlatio
 \centering
 \caption{Functional correspondence of critical phenomena parameters across domains}
 \label{tab:equiv}
-\begin{tabular}{llll}
+{\small
+\begin{tabular}{lllll}
 \toprule
-\textbf{Domain} & \textbf{Parameter} & \textbf{Meaning} & \textbf{Critical Value} \\
+\textbf{Domain} & \textbf{Parameter} & \textbf{Common name in domain} & \textbf{Meaning} & \textbf{Critical Value} \\
 \midrule
-Physics & $\xi$ & Correlation length & $\xi \to \infty$ \\
-Physics & $\tau$ & Autocorrelation time & $\tau \to \infty$ \\
-DFA & $\alpha$ & Scaling exponent & $\alpha \approx 1$ \\
-Finance & $H$ & Hurst exponent & $H \approx 1$ \\
-ML & $\chi$ & Spectral radius & $\chi \approx 1$ \\
-HRV & $\alpha_1$ & Short-term scaling & $\alpha_1 \approx 0.75$\rlap{$^*$} \\
-Traffic & $\rho_c$ & Critical density & Phase transition \\
+Physics & $\xi$ & Correlation length & Spatial correlation decay & $\xi \to \infty$ \\
+Physics & $\tau$ & Relaxation time & Temporal correlation decay & $\tau \to \infty$ \\
+DFA & $\alpha$ & DFA exponent & Detrended fluctuation scaling & $\alpha \approx 1$ \\
+Finance & $H$ & Hurst exponent & Long-range dependence & $H \approx 1$ \\
+ML & $\chi$ & Spectral radius & Recurrent weight stability & $\chi \approx 1$ \\
+HRV & $\alpha_1$ & Short-term DFA exponent & Autonomic regulation index & $\alpha_1 \approx 0.75$\rlap{$^*$} \\
+Traffic & $\rho_c$ & Critical density & Flow-density phase boundary & Phase transition \\
 \bottomrule
 \end{tabular}
+}
 \end{table}
 
 \noindent$^*$\textit{Note on HRV:} The value $\alpha_1 \approx 0.75$ for healthy hearts reflects a domain-specific operating point: unlike most systems surveyed here, healthy cardiac dynamics operate \textit{away from} criticality. A healthy heart maintains moderate long-range correlation ($\alpha_1 \approx 0.75$), providing adaptive flexibility without the fragility of the critical regime. Values of $\alpha_1 \approx 1.0$ indicate pathological loss of autonomic regulation---the heart has become critically correlated, a marker of cardiovascular disease \cite{peng1995}. DFA thus serves the same diagnostic function (detecting the critical boundary) while the clinically relevant value differs because healthy hearts are, in effect, engineered by natural selection to avoid sustained criticality. (This interpretation is not universal; Mora and Bialek \cite{mora2011biological} argue that biological systems operate at or near criticality to maximize adaptive flexibility, and the debate between critical and sub-critical operating points remains active.)
@@ -442,7 +455,7 @@ Under either interpretation---natural convergence or partial seeding---the pract
 
 \subsection{Future Directions}
 
-A category-theoretic framework could formalize which aspects of criticality mathematics are truly universal and which are domain-specific, producing a mapping across notations. Cross-domain teaching materials---presenting criticality from first principles rather than within any single discipline---would test whether unified instruction improves research outcomes.
+A category-theoretic framework could formalize which aspects of criticality mathematics are truly universal and which are domain-specific, producing a mapping across notations. Terminology standardization itself---developing shared vocabulary across domains analogous to the eventual consolidation of calculus notation---remains future work requiring sustained multi-domain collaboration rather than prescription by any single research group. Cross-domain teaching materials---presenting criticality from first principles rather than within any single discipline---would test whether unified instruction improves research outcomes.
 
 The convergence pattern invites further documentation: ecology, climate (tipping points), and social dynamics are candidates. Geophysics offers another: the Gutenberg-Richter law relating earthquake frequency to magnitude (1944) predates SOC but was later recognized as a manifestation of self-organized criticality. May's (1977) work on ecosystem stability thresholds---an early ecological engagement with bifurcation mathematics---could qualify as empirical precursor or intra-field extension. Historical investigation of the 1990s clustering---through funding records, conference networks, and computational tool availability---could sharpen the convergence-vs.-transfer distinction. A practical question remains open: how should funding agencies respond to convergent discovery of fundamental mathematics?
 
