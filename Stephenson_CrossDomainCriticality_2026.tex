@@ -41,7 +41,7 @@
 \maketitle
 
 \begin{abstract}
-Techniques for detecting critical phenomena---phase transitions where correlation length diverges and small perturbations have large effects---have been developed across multiple fields over nine decades. We survey between six and eight disciplines (depending on classification criteria) where researchers derived functionally corresponding measures of correlation scaling, with little documented awareness of each other's work. The physicist's correlation length $\xi$, the cardiologist's DFA scaling exponent $\alpha$, the financial analyst's Hurst exponent $H$, and the machine learning engineer's spectral radius $\chi$ all detect critical signatures under different notation.
+Techniques for detecting critical phenomena---phase transitions where correlation length diverges and small perturbations have large effects---have been developed across multiple fields over nine decades. We survey between six and nine disciplines (depending on classification criteria) where researchers derived functionally corresponding measures of correlation scaling, with little documented awareness of each other's work. The physicist's correlation length $\xi$, the cardiologist's DFA scaling exponent $\alpha$, the financial analyst's Hurst exponent $H$, and the machine learning engineer's spectral radius $\chi$ all detect critical signatures under different notation.
 
 We classify each surveyed domain as independent derivation, domain transfer, or empirical precursor, and present citation network evidence that cross-domain citations remained significantly below random-mixing expectations (under a simple null model of domain mixing) during the formative period (1987--2010). The framework that motivated this investigation---derived from distributed systems engineering and presented in Appendix~A---is excluded from the survey count given the authors' dual role.
 
@@ -110,6 +110,7 @@ Machine Learning & Qualified independent & ESNs; edge-of-chaos circulating \\
 Neuroscience & Qualified independent & Beggs \& Plenz; cited Bak \\
 Power Grids & Independent derivation & Cascade failure analysis \\
 Traffic Flow & Empirical precursor + qualified & Greenshields / Kerner \\
+Climate / Thermohaline & Independent derivation & Bifurcation analysis of AMOC \\
 Sornette (2004) & Prior cross-domain synthesis & Textbook treatment \\
 \bottomrule
 \end{tabular}
@@ -117,7 +118,7 @@ Sornette (2004) & Prior cross-domain synthesis & Textbook treatment \\
 
 The scope of this paper is a historical survey of convergent discovery, supported by citation network analysis. We do not claim mathematical proof of universal equivalence; we document a pattern and present evidence bearing on whether it reflects independent derivation or knowledge transfer.
 
-Between six and eight of the domains surveyed represent convergent discovery, depending on how strictly one defines ``independent derivation.'' Six domains---Kauffman's edge of chaos, biomedical signal analysis, neuroscience, machine learning, power grid analysis, and traffic flow (Kerner)---present the clearest cases for independent development, though with qualifications noted for each. Bak's SOC is classified separately as intra-physics extension. Adding domain transfer (finance) yields seven; adding empirical precursor (Greenshields' traffic work) yields eight. The authors' own framework (Appendix~\ref{app:correspondence}), which motivated this survey, is presented separately and excluded from this count.
+Between six and nine of the domains surveyed represent convergent discovery, depending on how strictly one defines ``independent derivation.'' Six domains---Kauffman's edge of chaos, biomedical signal analysis, neuroscience, machine learning, power grid analysis, and traffic flow (Kerner)---present the clearest cases for independent development, though with qualifications noted for each. Bak's SOC is classified separately as intra-physics extension. Adding domain transfer (finance) yields seven; adding empirical precursor (Greenshields' traffic work) yields eight; adding climate/thermohaline circulation yields nine. The authors' own framework (Appendix~\ref{app:correspondence}), which motivated this survey, is presented separately and excluded from this count.
 
 \section{Cross-Domain Discoveries}
 \label{sec:discoveries}
@@ -234,6 +235,21 @@ Kerner's three-phase model (2004) \cite{kerner2004} formalized this as a genuine
 Near $\rho_c$, jam sizes follow power laws $P(s) \sim s^{-\tau}$, similar to sandpile avalanches. The critical point shows diverging correlation length---disturbances propagate arbitrarily far upstream.
 
 Capacity peaks at $\rho = \rho_c$, and travel time variance diverges as the critical density is approached. The three-regime structure and diverging correlation length recur here without any methodological borrowing from the fields that formalized them first.
+
+\subsection{Thermohaline Circulation / Climate Tipping Points (1961--2021)}
+
+\noindent\textit{Classification: independent derivation within climate science; connected to physics through shared bifurcation theory but developed for domain-specific physical systems without awareness of equivalent biomedical or financial applications.}
+\smallskip
+
+Stommel (1961) \cite{stommel1961} introduced a two-box model of thermohaline circulation exhibiting bistability---the Atlantic Meridional Overturning Circulation (AMOC) can occupy either a strong or collapsed equilibrium, with hysteresis preventing smooth recovery. This was among the earliest applications of bifurcation analysis to a geophysical system.
+
+Schmidt and Mysak (1996) \cite{schmidt_mysak1996} demonstrated that zonally averaged thermohaline models exhibit multiple equilibria structured as cusp catastrophes---the same geometric object appearing in Van der Pol oscillators and Kauffman's NK fitness landscapes. Wang and Mysak (2006) \cite{wang_mysak2006} showed that Dansgaard-Oeschger oscillations in paleoclimate records correspond to stochastic switching near a Hopf bifurcation in the meridional overturning circulation, with irregular periods characteristic of critical slowing down---the same signature that DFA detects in cardiac time series.
+
+Rahmstorf et al.\ (2005) \cite{rahmstorf2005}, in an intercomparison of eleven independent climate models, found that all exhibited the same hysteresis loop for AMOC response to freshwater forcing---convergent discovery \textit{within} a single domain, paralleling the cross-domain convergence this paper documents. Lenton et al.\ (2008) \cite{lenton2008} synthesized these results into a tipping elements framework for the climate system, citing both Rahmstorf and the broader bifurcation literature.
+
+The chain from climate science to the methods surveyed here closes through Bury et al.\ (2021) \cite{bury2021}, who trained deep learning classifiers on normal form bifurcation data---saddle-node, Hopf, transcritical---and demonstrated that these classifiers generalize across ecology, climate, and cardiology without domain-specific retraining. Bury et al.\ (2023) \cite{bury2023} validated the approach on chick-heart tissue, Glass's system, using training data from the same bifurcation normal forms that govern AMOC tipping points. Bury's lineage traces through Scheffer's (2009) \cite{scheffer2009} bridging review to Wissel (1984) \cite{wissel1984}, who documented characteristic return time near thresholds in ecology---a pre-Scheffer articulation of critical slowing down---and to Gardiner's (1983) \cite{gardiner1983} stochastic processes handbook, which formalized the mathematical tools both ecologists and physicists would independently adopt. The mathematical structure connecting these domains was always there; practitioners in each field developed their diagnostics independently.
+
+A concrete illustration: Mysak and Glass are both emeritus professors at McGill University, both Fellows of the Royal Society of Canada, and both played in the same faculty orchestra. Mysak has noted that he ``sometimes meet[s] Leon on the bus and then I can talk about our `related' work'' (personal communication, 2026). They did not know their research used the same bifurcation mathematics until an outside investigator connected them. The convergence pattern this paper documents is not an abstraction---it persists even at the scale of a single university bus route.
 
 \section{Evidence for Independent Discovery}
 \label{sec:evidence}
@@ -360,6 +376,7 @@ Table~\ref{tab:timeline} shows the discovery timeline:
 \midrule
 1935 & Traffic Flow & Greenshields \\
 1944 & Statistical Physics & Onsager \\
+1961 & Climate & Stommel \\
 1963 & Finance & Mandelbrot \\
 1966 & Statistical Physics & Kadanoff \\
 1971 & Statistical Physics & Wilson (Nobel 1982) \\
@@ -367,13 +384,17 @@ Table~\ref{tab:timeline} shows the discovery timeline:
 1993 & Complexity Science & Kauffman \\
 1994 & Biomedical & Peng et al. \\
 1994 & Finance & Peters \\
+1996 & Climate & Schmidt \& Mysak \\
 2001 & Machine Learning & Jaeger \\
 2003 & Neuroscience & Beggs \& Plenz \\
 2004 & Cross-Domain Synthesis & Sornette \\
 2004 & Power Grids & Crucitti et al. \\
 2004 & Traffic Flow & Kerner \\
+2005 & Climate & Rahmstorf et al. \\
 2007 & Power Grids & Dobson et al. \\
+2008 & Climate & Lenton et al. \\
 2013 & Machine Learning & Saxe et al. \\
+2021 & Climate/DL & Bury et al. \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -499,7 +520,7 @@ All three candidates peak at $T = T_c$. Temporal correlation $\tau$ increases $1
 
 \subsection*{What This Paper Is About}
 
-Imagine you are learning a card game, and you figure out the rules just by watching people play. Then you discover that people in six to eight different cities---depending on how strictly you count---figured out the same rules by watching their own games, without ever talking to each other.
+Imagine you are learning a card game, and you figure out the rules just by watching people play. Then you discover that people in six to nine different cities---depending on how strictly you count---figured out the same rules by watching their own games, without ever talking to each other.
 
 That is roughly what happened with the mathematics in this paper. And it took nine decades for anyone to notice.
 
