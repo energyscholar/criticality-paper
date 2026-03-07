@@ -41,9 +41,9 @@
 \maketitle
 
 \begin{abstract}
-Techniques for detecting critical phenomena---phase transitions where correlation length diverges and small perturbations have large effects---have been developed across multiple fields over nine decades. We survey between six and nine disciplines (depending on classification criteria) where researchers derived functionally corresponding measures of correlation scaling, with little documented awareness of each other's work. The physicist's correlation length $\xi$, the cardiologist's DFA scaling exponent $\alpha$, the financial analyst's Hurst exponent $H$, and the machine learning engineer's spectral radius $\chi$ all detect critical signatures under different notation.
+Techniques for detecting critical phenomena---phase transitions where correlation length diverges and small perturbations have large effects---have been developed across multiple fields over nine decades. We survey between six and eight disciplines (depending on classification criteria) where researchers derived functionally corresponding measures of correlation scaling, with little documented awareness of each other's work. The physicist's correlation length $\xi$, the cardiologist's DFA scaling exponent $\alpha$, the financial analyst's Hurst exponent $H$, and the machine learning engineer's spectral radius $\chi$ all detect critical signatures under different notation.
 
-We classify each surveyed domain as independent derivation, domain transfer, or empirical precursor, and present citation network evidence that cross-domain citations remained significantly below random-mixing expectations (under a simple null model of domain mixing) during the formative period (1987--2010). We separately present Metatron Dynamics, a framework derived from distributed systems engineering, as a candidate additional instance in Appendix~A, classified as unvalidated given the authors' dual role.
+We classify each surveyed domain as independent derivation, domain transfer, or empirical precursor, and present citation network evidence that cross-domain citations remained significantly below random-mixing expectations (under a simple null model of domain mixing) during the formative period (1987--2010). The framework that motivated this investigation---derived from distributed systems engineering and presented in Appendix~A---is excluded from the survey count given the authors' dual role.
 
 Building on prior syntheses---notably Sornette (2004) \cite{sornette2004}---this paper contributes an honest taxonomy of discovery types and quantitative documentation of the convergence pattern. Because these findings affect fields beyond mathematics and physics, we include a self-contained plain-language summary in Appendix~B; non-specialist readers may wish to start there.
 \end{abstract}
@@ -72,6 +72,8 @@ Statistical physics established the mathematical framework between 1944 and 1971
 Why did it take 15--50 years for equivalent techniques to appear elsewhere? The most parsimonious explanation is natural convergence: as complexity science, biomedicine, finance, and machine learning matured during the 1980s--2000s, researchers confronting correlation problems derived similar mathematics from first principles. Disciplinary barriers compound this---a physicist's ``correlation length'' and a financial analyst's ``Hurst exponent'' look like different things even when they diagnose the same critical regime.
 
 A notable prior synthesis is Sornette's 2004 textbook \cite{sornette2004}, which explicitly unified critical phenomena across natural sciences---applying statistical mechanics concepts to biology, economics, and geophysics. Scheffer et al.'s influential 2009 review \cite{scheffer2009} further demonstrated cross-domain applicability of early warning signals. That domain-specific literatures continued developing largely in parallel despite these works suggests that even high-quality synthesis faces adoption barriers across disciplinary boundaries. Our contribution is not the first cross-domain synthesis but rather quantitative documentation of the convergence pattern: tracing when and how awareness spread, and classifying each surveyed instance by type.
+
+Our investigation was prompted by a specific case of apparent independent derivation (Appendix~\ref{app:correspondence}): a framework developed in distributed systems engineering whose critical-point behavior resembled established physics. We document the broader convergence pattern the resulting literature search uncovered.
 
 \subsection{Definitions and Scope}
 \label{sec:definitions}
@@ -107,14 +109,13 @@ Neuroscience & Qualified independent & Beggs \& Plenz; cited Bak \\
 Power Grids & Independent derivation & Cascade failure analysis \\
 Traffic Flow & Empirical precursor + qualified & Greenshields / Kerner \\
 Sornette (2004) & Prior cross-domain synthesis & Textbook treatment \\
-Metatron Dynamics & Candidate (unvalidated) & See Appendix~\ref{app:correspondence} \\
 \bottomrule
 \end{tabular}
 \end{table}
 
 The scope of this paper is a historical survey of convergent discovery, supported by citation network analysis. We do not claim mathematical proof of universal equivalence; we document a pattern and present evidence bearing on whether it reflects independent derivation or knowledge transfer.
 
-Between six and nine of the domains surveyed represent convergent discovery, depending on how strictly one defines ``independent derivation.'' Six domains---Kauffman's edge of chaos, biomedical signal analysis, neuroscience, machine learning, power grid analysis, and traffic flow (Kerner)---present the clearest cases for independent development, though with qualifications noted for each. Bak's SOC is classified separately as intra-physics extension. Adding domain transfer (finance) yields seven; adding empirical precursor (Greenshields' traffic work) yields eight. A candidate additional instance (Metatron Dynamics, Appendix~\ref{app:correspondence}) would yield nine if validated.
+Between six and eight of the domains surveyed represent convergent discovery, depending on how strictly one defines ``independent derivation.'' Six domains---Kauffman's edge of chaos, biomedical signal analysis, neuroscience, machine learning, power grid analysis, and traffic flow (Kerner)---present the clearest cases for independent development, though with qualifications noted for each. Bak's SOC is classified separately as intra-physics extension. Adding domain transfer (finance) yields seven; adding empirical precursor (Greenshields' traffic work) yields eight. The authors' own framework (Appendix~\ref{app:correspondence}), which motivated this survey, is presented separately and excluded from this count.
 
 \section{Cross-Domain Discoveries}
 \label{sec:discoveries}
@@ -275,7 +276,7 @@ Notably, Sornette's cross-domain synthesis textbook \cite{sornette2004} was itse
 
 \subsection{Notation Divergence}
 
-Each domain developed its own notation for the same underlying mathematics, with no terminological inheritance between them. Statistical physics measures correlation length $\xi$ and critical exponents $\nu$, $\eta$. In cardiology, DFA introduced scaling exponent $\alpha$; financial analysts adopted the Hurst exponent $H$ from hydrology. Machine learning settled on spectral radius $\chi$ for recurrent network dynamics. Traffic engineers characterize transitions through critical density $\rho_c$, while Metatron Dynamics defines its contraction factor $\kappa_m$.
+Each domain developed its own notation for the same underlying mathematics, with no terminological inheritance between them. Statistical physics measures correlation length $\xi$ and critical exponents $\nu$, $\eta$. In cardiology, DFA introduced scaling exponent $\alpha$; financial analysts adopted the Hurst exponent $H$ from hydrology. Machine learning settled on spectral radius $\chi$ for recurrent network dynamics. Traffic engineers characterize transitions through critical density $\rho_c$.
 
 None of these notation systems show terminological inheritance from each other---a physicist would not recognize $\alpha$ as diagnosing the same critical regime as $\xi$ without careful analysis, nor would a financial analyst connect $H$ to $\chi$. This contrasts with deliberate transfer cases: Moore and Mertens (2011), applying phase transition theory to computational complexity, explicitly preserved the statistical mechanics language of ``order parameters'' and ``critical thresholds.'' Notation divergence is the expected signature of independent derivation; notation preservation signals knowledge transfer.
 
@@ -316,7 +317,6 @@ Finance & $H$ & Hurst exponent & $H \approx 1$ \\
 ML & $\chi$ & Spectral radius & $\chi \approx 1$ \\
 HRV & $\alpha_1$ & Short-term scaling & $\alpha_1 \approx 0.75$\rlap{$^*$} \\
 Traffic & $\rho_c$ & Critical density & Phase transition \\
-Metatron & $\kappa_m$ & Contraction factor & $\kappa_m \to 1$ \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -373,7 +373,6 @@ Table~\ref{tab:timeline} shows the discovery timeline:
 2004 & Traffic Flow & Kerner \\
 2007 & Power Grids & Dobson et al. \\
 2013 & Machine Learning & Saxe et al. \\
-2024 & Metatron Dynamics & Macomber \& Stephenson \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -442,7 +441,7 @@ The authors acknowledge Genevieve Prentice for accessibility architecture and pu
 
 This work was prepared with assistance from AI tools (Claude, Anthropic), which aided in literature search, technical writing, document formatting, revision strategy, and voice analysis. All scientific insights, the convergence thesis, cross-domain analysis, and discovery classifications originate from the authors' independent research. The authors retain full responsibility for content and conclusions.
 
-\textit{Conflict of interest:} The authors are developers of the Metatron Dynamics framework discussed in Appendix~\ref{app:correspondence} and Appendix~\ref{app:operators}. We intend to commercialize this framework; as of this writing, no company has been formed, no external funding has been received, and no revenue has been generated. This dual role---framework authors and survey authors---is disclosed throughout the paper, and the framework is classified as an unvalidated candidate to reflect this.
+\textit{Conflict of interest:} The authors are developers of the Metatron Dynamics framework discussed in Appendix~\ref{app:correspondence} and Appendix~\ref{app:operators}. This framework motivated the literature search underlying this survey. We intend to commercialize this framework; as of this writing, no company has been formed, no external funding has been received, and no revenue has been generated. This dual role---framework authors and survey authors---is disclosed throughout the paper, and the framework is presented separately in the appendix to reflect this.
 
 \bibliographystyle{plain}
 \bibliography{Stephenson_CrossDomainCriticality_2026}
@@ -450,16 +449,24 @@ This work was prepared with assistance from AI tools (Claude, Anthropic), which 
 \newpage
 \appendix
 
-\section{Metatron Dynamics: Candidate Framework and Correspondence Demonstration}
+\section{Metatron Dynamics: Motivating Framework}
 \label{app:correspondence}
 
-Metatron Dynamics emerged from distributed systems engineering work by Macomber, evaluated by Stephenson (2024--2025). Recognizing structural parallels to established criticality measures, we conducted the literature search that revealed the convergence pattern documented here. We present the framework as a candidate instance of independent discovery, not a validated one. Direct computation of the contraction factor $\kappa_m$ from the $E$ operator's Jacobian remains future work; the correspondence demonstration below maps $\kappa_m$ candidates to established observables.
+\subsection*{How This Paper Originated}
 
-The framework composes four operators---gradient extraction ($A$), local coupling ($B$), antisymmetric circulation ($R$), and bounded coherence ($C$)---into a composite evolution operator $E$. Operator definitions appear in Appendix~\ref{app:operators}. The contraction factor $\kappa_m$ governs three regimes: contracting ($\kappa_m < 1$), critical ($\kappa_m \to 1$), and expanding ($\kappa_m > 1$). At criticality, the framework exhibits diverging convergence time, long-range correlations, and sensitivity to perturbation---signatures found across every domain surveyed in Section~\ref{sec:discoveries}.
+Metatron Dynamics originated in distributed systems engineering. Macomber independently derived a set of discrete operators for analyzing relational structure in computational networks (Appendix~\ref{app:operators}). When Stephenson evaluated the framework in 2024, the operators' behavior at parameter boundaries---diverging convergence time, long-range correlation, sensitivity to perturbation---resembled the signatures of critical phase transitions in statistical physics. Neither author had training in statistical mechanics.
 
-Correspondence testing on the 2D Ising model confirms $\kappa_m$ candidates peak at $T_c = 2.269$. Several features support independent derivation: the operational focus on relational computation, a specific operator composition not previously documented in the criticality literature, unrelated notation, and engineering origin context.
+This resemblance prompted a literature search. The search revealed that at least six other fields had independently derived functionally corresponding mathematics, with remarkably little cross-citation. The convergence pattern documented in this paper is what the search uncovered. Our framework is not the paper's thesis; it is the accident that revealed the thesis. That a pair of engineers could stumble into known bifurcation mathematics from first principles is itself a data point consistent with the pattern we document---but we present it separately, as unvalidated, in recognition of our dual role.
 
-As authors of both the framework and this survey, we disclose our dual role. External validation would strengthen the independence claim. We intend to commercialize under the Metatron Dynamics name; no company has been formed and no revenue generated as of this writing.
+\subsection*{Framework Summary}
+
+The framework composes four operators---gradient extraction ($A$), local coupling ($B$), antisymmetric circulation ($R$), and bounded coherence ($C$)---into a composite evolution operator $E$. Operator definitions appear in Appendix~\ref{app:operators}. The contraction factor $\kappa_m$ governs three regimes: contracting ($\kappa_m < 1$), critical ($\kappa_m \to 1$), and expanding ($\kappa_m > 1$). At criticality, the framework exhibits diverging convergence time, long-range correlations, and sensitivity to perturbation.
+
+Direct computation of $\kappa_m$ from the $E$ operator's Jacobian remains future work; the correspondence demonstration below maps $\kappa_m$ candidates to established observables.
+
+\subsection*{Disclosure}
+
+As authors of both the framework and this survey, we disclose our dual role. External validation would strengthen any independence claim. We intend to commercialize under the Metatron Dynamics name; no company has been formed and no revenue generated as of this writing. We have excluded the framework from the main text's domain count, tables, and classification taxonomy to prevent our dual role from contaminating the survey's independence.
 
 \medskip
 \noindent\textbf{Correspondence Demonstration.}
@@ -491,7 +498,7 @@ All three candidates peak at $T = T_c$. Temporal correlation $\tau$ increases $1
 
 \subsection*{What This Paper Is About}
 
-Imagine you are learning a card game, and you figure out the rules just by watching people play. Then you discover that people in six to nine different cities---depending on how strictly you count---figured out the same rules by watching their own games, without ever talking to each other.
+Imagine you are learning a card game, and you figure out the rules just by watching people play. Then you discover that people in six to eight different cities---depending on how strictly you count---figured out the same rules by watching their own games, without ever talking to each other.
 
 That is roughly what happened with the mathematics in this paper. And it took nine decades for anyone to notice.
 
