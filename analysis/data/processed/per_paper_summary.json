@@ -1,0 +1,297 @@
+[
+  {
+    "label": "Bak et al. 1987",
+    "seed_domain": "Physics",
+    "total": 853,
+    "total_known": 774,
+    "cross_domain": 357,
+    "unknown": 79,
+    "cross_rate": 0.4612,
+    "domain_counts": {
+      "Unknown": 79,
+      "Biomedical": 174,
+      "CS/ML": 275,
+      "Physics": 242,
+      "Finance": 24,
+      "Social Science": 7,
+      "Biology": 6,
+      "Other": 18,
+      "Engineering": 28
+    }
+  },
+  {
+    "label": "Peng et al. 1994 (DFA)",
+    "seed_domain": "Biomedical",
+    "total": 4558,
+    "total_known": 3982,
+    "cross_domain": 2838,
+    "unknown": 576,
+    "cross_rate": 0.7127,
+    "domain_counts": {
+      "Unknown": 576,
+      "Biomedical": 833,
+      "Finance": 604,
+      "CS/ML": 820,
+      "Physics": 1299,
+      "Biology": 58,
+      "Engineering": 295,
+      "Other": 69,
+      "Social Science": 4
+    }
+  },
+  {
+    "label": "Crucitti et al. 2004",
+    "seed_domain": "Engineering",
+    "total": 1089,
+    "total_known": 957,
+    "cross_domain": 753,
+    "unknown": 132,
+    "cross_rate": 0.7868,
+    "domain_counts": {
+      "Unknown": 132,
+      "Physics": 71,
+      "CS/ML": 645,
+      "Biomedical": 53,
+      "Engineering": 143,
+      "Finance": 33,
+      "Other": 8,
+      "Biology": 2,
+      "Social Science": 2
+    }
+  },
+  {
+    "label": "Dobson et al. 2007",
+    "seed_domain": "Engineering",
+    "total": 935,
+    "total_known": 785,
+    "cross_domain": 570,
+    "unknown": 150,
+    "cross_rate": 0.7261,
+    "domain_counts": {
+      "Physics": 73,
+      "CS/ML": 459,
+      "Unknown": 150,
+      "Biomedical": 50,
+      "Finance": 37,
+      "Social Science": 14,
+      "Engineering": 145,
+      "Other": 6,
+      "Biology": 1
+    }
+  },
+  {
+    "label": "Mantegna & Stanley 1995",
+    "seed_domain": "Finance",
+    "total": 1637,
+    "total_known": 1474,
+    "cross_domain": 812,
+    "unknown": 163,
+    "cross_rate": 0.5509,
+    "domain_counts": {
+      "Physics": 499,
+      "Unknown": 163,
+      "Finance": 662,
+      "Biomedical": 97,
+      "CS/ML": 166,
+      "Engineering": 23,
+      "Social Science": 11,
+      "Biology": 2,
+      "Other": 14
+    }
+  },
+  {
+    "label": "Saxe et al. 2013",
+    "seed_domain": "CS/ML",
+    "total": 1981,
+    "total_known": 1815,
+    "cross_domain": 105,
+    "unknown": 166,
+    "cross_rate": 0.0579,
+    "domain_counts": {
+      "Unknown": 166,
+      "CS/ML": 1708,
+      "Biology": 11,
+      "Biomedical": 53,
+      "Physics": 30,
+      "Finance": 5,
+      "Engineering": 5,
+      "Other": 3
+    }
+  },
+  {
+    "label": "Kauffman 1993",
+    "seed_domain": "Biology",
+    "total": 2000,
+    "total_known": 1874,
+    "cross_domain": 1504,
+    "unknown": 126,
+    "cross_rate": 0.8026,
+    "domain_counts": {
+      "Biomedical": 348,
+      "Unknown": 126,
+      "Physics": 121,
+      "CS/ML": 814,
+      "Biology": 83,
+      "Finance": 219,
+      "Social Science": 166,
+      "Other": 78,
+      "Engineering": 45
+    }
+  },
+  {
+    "label": "Jaeger 2001",
+    "seed_domain": "CS/ML",
+    "total": 2000,
+    "total_known": 1770,
+    "cross_domain": 331,
+    "unknown": 230,
+    "cross_rate": 0.187,
+    "domain_counts": {
+      "Unknown": 230,
+      "Physics": 114,
+      "CS/ML": 1433,
+      "Biology": 20,
+      "Biomedical": 148,
+      "Engineering": 43,
+      "Finance": 11,
+      "Social Science": 1
+    }
+  },
+  {
+    "label": "Sornette 2004",
+    "seed_domain": "Physics",
+    "total": 628,
+    "total_known": 521,
+    "cross_domain": 186,
+    "unknown": 107,
+    "cross_rate": 0.357,
+    "domain_counts": {
+      "Physics": 195,
+      "Unknown": 107,
+      "Biomedical": 92,
+      "CS/ML": 133,
+      "Finance": 63,
+      "Biology": 7,
+      "Engineering": 13,
+      "Other": 14,
+      "Social Science": 4
+    }
+  },
+  {
+    "label": "Peters 1994",
+    "seed_domain": "Finance",
+    "total": 1034,
+    "total_known": 890,
+    "cross_domain": 433,
+    "unknown": 144,
+    "cross_rate": 0.4865,
+    "domain_counts": {
+      "Unknown": 144,
+      "Finance": 457,
+      "CS/ML": 156,
+      "Biomedical": 25,
+      "Physics": 189,
+      "Other": 21,
+      "Social Science": 7,
+      "Engineering": 34,
+      "Biology": 1
+    }
+  },
+  {
+    "label": "Scheffer et al. 2009",
+    "seed_domain": "Biology",
+    "total": 4218,
+    "total_known": 3303,
+    "cross_domain": 2764,
+    "unknown": 915,
+    "cross_rate": 0.8368,
+    "domain_counts": {
+      "Unknown": 915,
+      "CS/ML": 653,
+      "Physics": 378,
+      "Biomedical": 1040,
+      "Biology": 174,
+      "Finance": 233,
+      "Engineering": 451,
+      "Other": 285,
+      "Social Science": 89
+    }
+  },
+  {
+    "label": "Lenton et al. 2008",
+    "seed_domain": "Physics",
+    "total": 3552,
+    "total_known": 2513,
+    "cross_domain": 1999,
+    "unknown": 1039,
+    "cross_rate": 0.7955,
+    "domain_counts": {
+      "Unknown": 1039,
+      "Biomedical": 419,
+      "Physics": 284,
+      "Biology": 44,
+      "CS/ML": 204,
+      "Finance": 389,
+      "Social Science": 237,
+      "Engineering": 586,
+      "Other": 350
+    }
+  },
+  {
+    "label": "Beggs & Plenz 2003",
+    "seed_domain": "Biomedical",
+    "total": 2123,
+    "total_known": 1947,
+    "cross_domain": 729,
+    "unknown": 176,
+    "cross_rate": 0.3744,
+    "domain_counts": {
+      "Unknown": 176,
+      "Physics": 300,
+      "Biology": 87,
+      "CS/ML": 766,
+      "Biomedical": 771,
+      "Engineering": 7,
+      "Finance": 5,
+      "Other": 7,
+      "Social Science": 4
+    }
+  },
+  {
+    "label": "Mora & Bialek 2011",
+    "seed_domain": "Biology",
+    "total": 752,
+    "total_known": 674,
+    "cross_domain": 408,
+    "unknown": 78,
+    "cross_rate": 0.6053,
+    "domain_counts": {
+      "Physics": 146,
+      "Biology": 26,
+      "Unknown": 78,
+      "Biomedical": 250,
+      "CS/ML": 232,
+      "Finance": 8,
+      "Social Science": 4,
+      "Other": 6,
+      "Engineering": 2
+    }
+  },
+  {
+    "label": "Bury et al. 2021",
+    "seed_domain": "CS/ML",
+    "total": 232,
+    "total_known": 147,
+    "cross_domain": 91,
+    "unknown": 85,
+    "cross_rate": 0.619,
+    "domain_counts": {
+      "Physics": 21,
+      "Unknown": 85,
+      "Biomedical": 63,
+      "CS/ML": 55,
+      "Biology": 6,
+      "Finance": 2
+    }
+  }
+]

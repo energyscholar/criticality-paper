@@ -1,0 +1,188 @@
+{
+  "_comment": "Maps Semantic Scholar fieldsOfStudy to paper domain categories. Used by classify_domains.py.",
+  "_coding_rules": [
+    "Multi-field papers: primary domain = first match in priority order below",
+    "Priority: Physics > Biomedical > Engineering > Finance > CS/ML > Biology > Social Science > Other",
+    "Papers with no fieldsOfStudy → 'Unknown' (excluded from chi-squared, reported separately)",
+    "Cross-domain = citing paper's primary domain ≠ seed paper's assigned domain"
+  ],
+  "field_to_domain": {
+    "Physics": "Physics",
+    "Mathematics": "Physics",
+    "Biology": "Biology",
+    "Medicine": "Biomedical",
+    "Computer Science": "CS/ML",
+    "Engineering": "Engineering",
+    "Economics": "Finance",
+    "Business": "Finance",
+    "Environmental Science": "Engineering",
+    "Geology": "Physics",
+    "Materials Science": "Physics",
+    "Chemistry": "Physics",
+    "Psychology": "Biomedical",
+    "Sociology": "Social Science",
+    "Political Science": "Social Science",
+    "Art": "Other",
+    "History": "Other",
+    "Philosophy": "Other",
+    "Geography": "Other",
+    "Linguistics": "Other",
+    "Agricultural and Food Sciences": "Other",
+    "Education": "Other"
+  },
+  "domains": [
+    "Physics",
+    "Biomedical",
+    "Biology",
+    "Engineering",
+    "Finance",
+    "CS/ML",
+    "Seismology",
+    "Hydrology",
+    "Materials",
+    "Linguistics",
+    "Conflict",
+    "Urban",
+    "Epidemiology",
+    "Social Science",
+    "Other",
+    "Unknown"
+  ],
+  "seed_papers": [
+    {
+      "id": "DOI:10.1103/PhysRevLett.59.381",
+      "domain": "Physics",
+      "label": "Bak et al. 1987",
+      "year": 1987
+    },
+    {
+      "id": "DOI:10.1103/PhysRevE.49.1685",
+      "domain": "Biomedical",
+      "label": "Peng et al. 1994 (DFA)",
+      "year": 1994
+    },
+    {
+      "id": "DOI:10.1103/PhysRevE.69.045104",
+      "domain": "Engineering",
+      "label": "Crucitti et al. 2004",
+      "year": 2004
+    },
+    {
+      "id": "DOI:10.1063/1.2737822",
+      "domain": "Engineering",
+      "label": "Dobson et al. 2007",
+      "year": 2007
+    },
+    {
+      "id": "DOI:10.1038/376046a0",
+      "domain": "Finance",
+      "label": "Mantegna & Stanley 1995",
+      "year": 1995
+    },
+    {
+      "id": "ARXIV:1312.6120",
+      "domain": "CS/ML",
+      "label": "Saxe et al. 2013",
+      "year": 2013
+    },
+    {
+      "search": "The origins of order self-organization selection evolution Kauffman",
+      "domain": "Biology",
+      "label": "Kauffman 1993",
+      "year": 1993
+    },
+    {
+      "search": "echo state approach analysing training recurrent neural networks Jaeger",
+      "domain": "CS/ML",
+      "label": "Jaeger 2001",
+      "year": 2001
+    },
+    {
+      "search": "Critical Phenomena Natural Sciences Chaos Fractals Sornette",
+      "domain": "Physics",
+      "label": "Sornette 2004",
+      "year": 2004
+    },
+    {
+      "search": "Fractal market analysis chaos theory Peters",
+      "domain": "Finance",
+      "label": "Peters 1994",
+      "year": 1994
+    },
+    {
+      "_comment": "New seeds for v2 — expand coverage",
+      "id": "DOI:10.1038/nature08227",
+      "domain": "Biology",
+      "label": "Scheffer et al. 2009",
+      "year": 2009
+    },
+    {
+      "id": "DOI:10.1073/pnas.0705414105",
+      "domain": "Physics",
+      "label": "Lenton et al. 2008",
+      "year": 2008
+    },
+    {
+      "id": "DOI:10.1523/JNEUROSCI.23-35-11167.2003",
+      "domain": "Biomedical",
+      "label": "Beggs & Plenz 2003",
+      "year": 2003
+    },
+    {
+      "id": "DOI:10.1007/s10955-011-0229-4",
+      "domain": "Biology",
+      "label": "Mora & Bialek 2011",
+      "year": 2011
+    },
+    {
+      "id": "DOI:10.1073/pnas.2106140118",
+      "domain": "CS/ML",
+      "label": "Bury et al. 2021",
+      "year": 2021
+    },
+    {
+      "_comment": "New domains from survey — Tier 1 candidates",
+      "id": "DOI:10.1029/JB094iB11p15635",
+      "domain": "Seismology",
+      "label": "Bak & Tang 1989 (earthquakes as SOC)",
+      "year": 1989
+    },
+    {
+      "search": "Long-term storage capacity reservoirs Hurst",
+      "domain": "Hydrology",
+      "label": "Hurst 1951",
+      "year": 1951
+    },
+    {
+      "id": "DOI:10.1038/35065675",
+      "domain": "Materials",
+      "label": "Sethna et al. 2001 (crackling noise)",
+      "year": 2001
+    },
+    {
+      "id": "DOI:10.1073/pnas.0335980100",
+      "domain": "Linguistics",
+      "label": "Ferrer i Cancho & Sole 2003",
+      "year": 2003
+    },
+    {
+      "search": "Statistics of Deadly Quarrels Richardson war casualties power law",
+      "domain": "Conflict",
+      "label": "Richardson 1960",
+      "year": 1960
+    },
+    {
+      "id": "DOI:10.1073/pnas.0610172104",
+      "domain": "Urban",
+      "label": "Bettencourt et al. 2007 (city scaling)",
+      "year": 2007
+    },
+    {
+      "search": "early warning signals infectious disease transitions Brett",
+      "domain": "Epidemiology",
+      "label": "Brett et al. 2021 (disease EWS)",
+      "year": 2021
+    }
+  ]
+}
+

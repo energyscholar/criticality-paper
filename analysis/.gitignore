@@ -1,0 +1,6 @@
+# Raw API response caches (large, regenerable)
+data/raw/
+
+# Python
+__pycache__/
+*.pyc

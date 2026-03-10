@@ -1,0 +1,509 @@
+[
+  {
+    "label": "Bak et al. 1987",
+    "seed_domain": "Physics",
+    "unique_citations": 853,
+    "same_domain": 417,
+    "cross_domain": 357,
+    "unknown": 79,
+    "cross_rate": 0.4612,
+    "ci_95": [
+      0.4264,
+      0.4965
+    ],
+    "domain_counts": {
+      "Unknown": 79,
+      "Biomedical": 282,
+      "Physics": 230,
+      "CS/ML": 154,
+      "Biology": 35,
+      "Engineering": 32,
+      "Social Science": 5,
+      "Other": 20,
+      "Finance": 16
+    },
+    "completeness": 1.0,
+    "truncated": false
+  },
+  {
+    "label": "Peng et al. 1994 (DFA)",
+    "seed_domain": "Biomedical",
+    "unique_citations": 4552,
+    "same_domain": 1144,
+    "cross_domain": 2838,
+    "unknown": 570,
+    "cross_rate": 0.7127,
+    "ci_95": [
+      0.6985,
+      0.7266
+    ],
+    "domain_counts": {
+      "Unknown": 570,
+      "Biomedical": 1108,
+      "Physics": 1381,
+      "CS/ML": 556,
+      "Biology": 114,
+      "Finance": 422,
+      "Engineering": 324,
+      "Other": 73,
+      "Social Science": 4
+    },
+    "completeness": 1.0,
+    "truncated": false
+  },
+  {
+    "label": "Crucitti et al. 2004",
+    "seed_domain": "Engineering",
+    "unique_citations": 1089,
+    "same_domain": 204,
+    "cross_domain": 753,
+    "unknown": 132,
+    "cross_rate": 0.7868,
+    "ci_95": [
+      0.7598,
+      0.8116
+    ],
+    "domain_counts": {
+      "Unknown": 132,
+      "Physics": 74,
+      "CS/ML": 534,
+      "Biomedical": 113,
+      "Engineering": 203,
+      "Finance": 19,
+      "Biology": 4,
+      "Other": 8,
+      "Social Science": 2
+    },
+    "completeness": 1.0,
+    "truncated": false
+  },
+  {
+    "label": "Dobson et al. 2007",
+    "seed_domain": "Engineering",
+    "unique_citations": 934,
+    "same_domain": 215,
+    "cross_domain": 570,
+    "unknown": 149,
+    "cross_rate": 0.7261,
+    "ci_95": [
+      0.6939,
+      0.7562
+    ],
+    "domain_counts": {
+      "Physics": 73,
+      "CS/ML": 343,
+      "Unknown": 149,
+      "Biomedical": 106,
+      "Biology": 7,
+      "Engineering": 213,
+      "Finance": 23,
+      "Social Science": 13,
+      "Other": 7
+    },
+    "completeness": 1.0,
+    "truncated": false
+  },
+  {
+    "label": "Mantegna & Stanley 1995",
+    "seed_domain": "Finance",
+    "unique_citations": 1630,
+    "same_domain": 662,
+    "cross_domain": 812,
+    "unknown": 156,
+    "cross_rate": 0.5509,
+    "ci_95": [
+      0.5254,
+      0.5761
+    ],
+    "domain_counts": {
+      "Physics": 696,
+      "Unknown": 156,
+      "Finance": 370,
+      "Biomedical": 169,
+      "CS/ML": 170,
+      "Engineering": 26,
+      "Biology": 16,
+      "Other": 18,
+      "Social Science": 9
+    },
+    "completeness": 1.0,
+    "truncated": false
+  },
+  {
+    "label": "Saxe et al. 2013",
+    "seed_domain": "CS/ML",
+    "unique_citations": 1981,
+    "same_domain": 1710,
+    "cross_domain": 105,
+    "unknown": 166,
+    "cross_rate": 0.0579,
+    "ci_95": [
+      0.048,
+      0.0696
+    ],
+    "domain_counts": {
+      "Unknown": 166,
+      "CS/ML": 1500,
+      "Engineering": 67,
+      "Biology": 28,
+      "Biomedical": 184,
+      "Physics": 30,
+      "Finance": 2,
+      "Other": 4
+    },
+    "completeness": 1.0,
+    "truncated": false
+  },
+  {
+    "label": "Kauffman 1993",
+    "seed_domain": "Biology",
+    "unique_citations": 4999,
+    "same_domain": 1056,
+    "cross_domain": 3787,
+    "unknown": 156,
+    "cross_rate": 0.782,
+    "ci_95": [
+      0.7701,
+      0.7934
+    ],
+    "domain_counts": {
+      "Biomedical": 1461,
+      "Unknown": 156,
+      "Physics": 345,
+      "CS/ML": 1460,
+      "Biology": 371,
+      "Engineering": 234,
+      "Finance": 380,
+      "Social Science": 383,
+      "Other": 209
+    },
+    "completeness": 0.622,
+    "truncated": true
+  },
+  {
+    "label": "Jaeger 2001",
+    "seed_domain": "CS/ML",
+    "unique_citations": 2000,
+    "same_domain": 1439,
+    "cross_domain": 331,
+    "unknown": 230,
+    "cross_rate": 0.187,
+    "ci_95": [
+      0.1695,
+      0.2058
+    ],
+    "domain_counts": {
+      "Unknown": 230,
+      "Physics": 111,
+      "CS/ML": 1085,
+      "Engineering": 121,
+      "Biomedical": 403,
+      "Biology": 42,
+      "Finance": 6,
+      "Social Science": 1,
+      "Other": 1
+    },
+    "completeness": 0.662,
+    "truncated": true
+  },
+  {
+    "label": "Sornette 2004",
+    "seed_domain": "Physics",
+    "unique_citations": 625,
+    "same_domain": 335,
+    "cross_domain": 186,
+    "unknown": 104,
+    "cross_rate": 0.357,
+    "ci_95": [
+      0.317,
+      0.3991
+    ],
+    "domain_counts": {
+      "Physics": 206,
+      "Unknown": 104,
+      "Biomedical": 127,
+      "CS/ML": 97,
+      "Biology": 25,
+      "Finance": 31,
+      "Engineering": 16,
+      "Other": 17,
+      "Social Science": 2
+    },
+    "completeness": 0.998,
+    "truncated": false
+  },
+  {
+    "label": "Peters 1994",
+    "seed_domain": "Finance",
+    "unique_citations": 1032,
+    "same_domain": 457,
+    "cross_domain": 433,
+    "unknown": 142,
+    "cross_rate": 0.4865,
+    "ci_95": [
+      0.4538,
+      0.5193
+    ],
+    "domain_counts": {
+      "Unknown": 142,
+      "Finance": 404,
+      "Physics": 209,
+      "Biomedical": 39,
+      "CS/ML": 167,
+      "Biology": 2,
+      "Other": 23,
+      "Engineering": 40,
+      "Social Science": 6
+    },
+    "completeness": 1.0,
+    "truncated": false
+  },
+  {
+    "label": "Scheffer et al. 2009",
+    "seed_domain": "Biology",
+    "unique_citations": 4211,
+    "same_domain": 539,
+    "cross_domain": 2764,
+    "unknown": 908,
+    "cross_rate": 0.8368,
+    "ci_95": [
+      0.8238,
+      0.849
+    ],
+    "domain_counts": {
+      "Unknown": 908,
+      "CS/ML": 370,
+      "Biology": 249,
+      "Biomedical": 1297,
+      "Physics": 354,
+      "Finance": 145,
+      "Engineering": 521,
+      "Other": 294,
+      "Social Science": 73
+    },
+    "completeness": 1.0,
+    "truncated": false
+  },
+  {
+    "label": "Lenton et al. 2008",
+    "seed_domain": "Physics",
+    "unique_citations": 3540,
+    "same_domain": 514,
+    "cross_domain": 1999,
+    "unknown": 1027,
+    "cross_rate": 0.7955,
+    "ci_95": [
+      0.7792,
+      0.8108
+    ],
+    "domain_counts": {
+      "Unknown": 1027,
+      "Biomedical": 464,
+      "Biology": 66,
+      "Physics": 286,
+      "Finance": 324,
+      "CS/ML": 148,
+      "Engineering": 650,
+      "Social Science": 218,
+      "Other": 357
+    },
+    "completeness": 1.0,
+    "truncated": false
+  },
+  {
+    "label": "Beggs & Plenz 2003",
+    "seed_domain": "Biomedical",
+    "unique_citations": 2120,
+    "same_domain": 1219,
+    "cross_domain": 729,
+    "unknown": 172,
+    "cross_rate": 0.3742,
+    "ci_95": [
+      0.353,
+      0.3959
+    ],
+    "domain_counts": {
+      "Unknown": 172,
+      "Physics": 194,
+      "Biology": 291,
+      "CS/ML": 300,
+      "Biomedical": 1135,
+      "Engineering": 14,
+      "Finance": 3,
+      "Other": 7,
+      "Social Science": 4
+    },
+    "completeness": 1.0,
+    "truncated": false
+  },
+  {
+    "label": "Mora & Bialek 2011",
+    "seed_domain": "Biology",
+    "unique_citations": 750,
+    "same_domain": 266,
+    "cross_domain": 408,
+    "unknown": 76,
+    "cross_rate": 0.6053,
+    "ci_95": [
+      0.5679,
+      0.6415
+    ],
+    "domain_counts": {
+      "Physics": 103,
+      "Biology": 143,
+      "Unknown": 76,
+      "Biomedical": 322,
+      "CS/ML": 96,
+      "Other": 5,
+      "Engineering": 3,
+      "Finance": 2
+    },
+    "completeness": 1.0,
+    "truncated": false
+  },
+  {
+    "label": "Bury et al. 2021",
+    "seed_domain": "CS/ML",
+    "unique_citations": 232,
+    "same_domain": 56,
+    "cross_domain": 91,
+    "unknown": 85,
+    "cross_rate": 0.619,
+    "ci_95": [
+      0.5385,
+      0.6936
+    ],
+    "domain_counts": {
+      "Biology": 12,
+      "Physics": 18,
+      "Unknown": 85,
+      "Biomedical": 78,
+      "CS/ML": 38,
+      "Engineering": 1
+    },
+    "completeness": 1.0,
+    "truncated": false
+  },
+  {
+    "label": "Bak & Tang 1989 (earthquakes as SOC)",
+    "seed_domain": "Seismology",
+    "unique_citations": 1084,
+    "same_domain": 0,
+    "cross_domain": 974,
+    "unknown": 110,
+    "cross_rate": 1.0,
+    "ci_95": [
+      0.9961,
+      1.0
+    ],
+    "domain_counts": {
+      "Physics": 725,
+      "Biomedical": 77,
+      "Unknown": 110,
+      "CS/ML": 95,
+      "Biology": 6,
+      "Finance": 5,
+      "Other": 32,
+      "Engineering": 32,
+      "Social Science": 2
+    },
+    "completeness": 1.0,
+    "truncated": false
+  },
+  {
+    "label": "Sethna et al. 2001 (crackling noise)",
+    "seed_domain": "Materials",
+    "unique_citations": 955,
+    "same_domain": 0,
+    "cross_domain": 847,
+    "unknown": 108,
+    "cross_rate": 1.0,
+    "ci_95": [
+      0.9955,
+      1.0
+    ],
+    "domain_counts": {
+      "Physics": 362,
+      "Biology": 54,
+      "Unknown": 108,
+      "Biomedical": 363,
+      "CS/ML": 44,
+      "Engineering": 15,
+      "Other": 5,
+      "Social Science": 1,
+      "Finance": 3
+    },
+    "completeness": 1.0,
+    "truncated": false
+  },
+  {
+    "label": "Ferrer i Cancho & Sole 2003",
+    "seed_domain": "Linguistics",
+    "unique_citations": 562,
+    "same_domain": 0,
+    "cross_domain": 491,
+    "unknown": 71,
+    "cross_rate": 1.0,
+    "ci_95": [
+      0.9922,
+      1.0
+    ],
+    "domain_counts": {
+      "Unknown": 71,
+      "CS/ML": 217,
+      "Biomedical": 173,
+      "Physics": 49,
+      "Biology": 10,
+      "Other": 25,
+      "Social Science": 9,
+      "Engineering": 4,
+      "Finance": 4
+    },
+    "completeness": 1.0,
+    "truncated": false
+  },
+  {
+    "label": "Richardson 1960",
+    "seed_domain": "Conflict",
+    "unique_citations": 1,
+    "same_domain": 0,
+    "cross_domain": 1,
+    "unknown": 0,
+    "cross_rate": 1.0,
+    "ci_95": [
+      0.2065,
+      1.0
+    ],
+    "domain_counts": {
+      "Biomedical": 1
+    },
+    "completeness": 1.0,
+    "truncated": false
+  },
+  {
+    "label": "Bettencourt et al. 2007 (city scaling)",
+    "seed_domain": "Urban",
+    "unique_citations": 2500,
+    "same_domain": 0,
+    "cross_domain": 1883,
+    "unknown": 617,
+    "cross_rate": 1.0,
+    "ci_95": [
+      0.998,
+      1.0
+    ],
+    "domain_counts": {
+      "Unknown": 617,
+      "Engineering": 147,
+      "CS/ML": 344,
+      "Physics": 165,
+      "Biomedical": 416,
+      "Biology": 40,
+      "Finance": 237,
+      "Social Science": 115,
+      "Other": 419
+    },
+    "completeness": 1.0,
+    "truncated": false
+  }
+]

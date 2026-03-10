@@ -1,0 +1,82 @@
+seed_domain,citing_domain,count
+Biology,Biology,763
+Biology,Biomedical,3080
+Biology,CS/ML,1926
+Biology,Engineering,758
+Biology,Finance,527
+Biology,Other,508
+Biology,Physics,802
+Biology,Social Science,456
+Biomedical,Biology,405
+Biomedical,Biomedical,2243
+Biomedical,CS/ML,856
+Biomedical,Engineering,338
+Biomedical,Finance,425
+Biomedical,Other,80
+Biomedical,Physics,1575
+Biomedical,Social Science,8
+CS/ML,Biology,82
+CS/ML,Biomedical,665
+CS/ML,CS/ML,2623
+CS/ML,Engineering,189
+CS/ML,Finance,8
+CS/ML,Other,5
+CS/ML,Physics,159
+CS/ML,Social Science,1
+Conflict,Biomedical,1
+Engineering,Biology,11
+Engineering,Biomedical,219
+Engineering,CS/ML,877
+Engineering,Engineering,416
+Engineering,Finance,42
+Engineering,Other,15
+Engineering,Physics,147
+Engineering,Social Science,15
+Finance,Biology,18
+Finance,Biomedical,208
+Finance,CS/ML,337
+Finance,Engineering,66
+Finance,Finance,774
+Finance,Other,41
+Finance,Physics,905
+Finance,Social Science,15
+Linguistics,Biology,10
+Linguistics,Biomedical,173
+Linguistics,CS/ML,217
+Linguistics,Engineering,4
+Linguistics,Finance,4
+Linguistics,Other,25
+Linguistics,Physics,49
+Linguistics,Social Science,9
+Materials,Biology,54
+Materials,Biomedical,363
+Materials,CS/ML,44
+Materials,Engineering,15
+Materials,Finance,3
+Materials,Other,5
+Materials,Physics,362
+Materials,Social Science,1
+Physics,Biology,126
+Physics,Biomedical,873
+Physics,CS/ML,399
+Physics,Engineering,698
+Physics,Finance,371
+Physics,Other,394
+Physics,Physics,722
+Physics,Social Science,225
+Seismology,Biology,6
+Seismology,Biomedical,77
+Seismology,CS/ML,95
+Seismology,Engineering,32
+Seismology,Finance,5
+Seismology,Other,32
+Seismology,Physics,725
+Seismology,Social Science,2
+Urban,Biology,40
+Urban,Biomedical,416
+Urban,CS/ML,344
+Urban,Engineering,147
+Urban,Finance,237
+Urban,Other,419
+Urban,Physics,165
+Urban,Social Science,115

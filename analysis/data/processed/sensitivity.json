@@ -1,0 +1,36 @@
+{
+  "1987--1995": {
+    "obs_rate_known_only": 0.8526,
+    "worst_case_all_unknown_same": 0.8261,
+    "best_case_all_unknown_cross": 0.8571,
+    "unknown_count": 5,
+    "unknown_fraction": 0.031
+  },
+  "1996--2005": {
+    "obs_rate_known_only": 0.6959,
+    "worst_case_all_unknown_same": 0.6709,
+    "best_case_all_unknown_cross": 0.7068,
+    "unknown_count": 101,
+    "unknown_fraction": 0.036
+  },
+  "2006--2015": {
+    "obs_rate_known_only": 0.7279,
+    "worst_case_all_unknown_same": 0.6874,
+    "best_case_all_unknown_cross": 0.743,
+    "unknown_count": 673,
+    "unknown_fraction": 0.056
+  },
+  "2016--2026": {
+    "obs_rate_known_only": 0.6148,
+    "worst_case_all_unknown_same": 0.4942,
+    "best_case_all_unknown_cross": 0.6903,
+    "unknown_count": 3971,
+    "unknown_fraction": 0.196
+  },
+  "merged_bio_biomedical": {
+    "1987--1995": 0.8397,
+    "1996--2005": 0.6149,
+    "2006--2015": 0.6599,
+    "2016--2026": 0.5122
+  }
+}

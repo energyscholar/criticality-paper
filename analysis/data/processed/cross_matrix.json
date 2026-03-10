@@ -1,0 +1,105 @@
+{
+  "Biomedical": {
+    "Biomedical": 2243,
+    "Physics": 1575,
+    "Biology": 405,
+    "CS/ML": 856,
+    "Engineering": 338,
+    "Finance": 425,
+    "Other": 80,
+    "Social Science": 8
+  },
+  "Physics": {
+    "Biomedical": 873,
+    "Physics": 722,
+    "CS/ML": 399,
+    "Biology": 126,
+    "Engineering": 698,
+    "Social Science": 225,
+    "Other": 394,
+    "Finance": 371
+  },
+  "Seismology": {
+    "Physics": 725,
+    "Biomedical": 77,
+    "CS/ML": 95,
+    "Engineering": 32,
+    "Biology": 6,
+    "Other": 32,
+    "Finance": 5,
+    "Social Science": 2
+  },
+  "Biology": {
+    "Biomedical": 3080,
+    "CS/ML": 1926,
+    "Social Science": 456,
+    "Biology": 763,
+    "Physics": 802,
+    "Finance": 527,
+    "Other": 508,
+    "Engineering": 758
+  },
+  "Engineering": {
+    "Physics": 147,
+    "Biomedical": 219,
+    "CS/ML": 877,
+    "Biology": 11,
+    "Engineering": 416,
+    "Finance": 42,
+    "Other": 15,
+    "Social Science": 15
+  },
+  "Materials": {
+    "Biomedical": 363,
+    "Biology": 54,
+    "Physics": 362,
+    "CS/ML": 44,
+    "Finance": 3,
+    "Engineering": 15,
+    "Other": 5,
+    "Social Science": 1
+  },
+  "CS/ML": {
+    "Biomedical": 665,
+    "CS/ML": 2623,
+    "Physics": 159,
+    "Engineering": 189,
+    "Biology": 82,
+    "Finance": 8,
+    "Other": 5,
+    "Social Science": 1
+  },
+  "Finance": {
+    "Biology": 18,
+    "Finance": 774,
+    "Physics": 905,
+    "Biomedical": 208,
+    "CS/ML": 337,
+    "Other": 41,
+    "Engineering": 66,
+    "Social Science": 15
+  },
+  "Urban": {
+    "Physics": 165,
+    "CS/ML": 344,
+    "Biomedical": 416,
+    "Biology": 40,
+    "Social Science": 115,
+    "Finance": 237,
+    "Other": 419,
+    "Engineering": 147
+  },
+  "Linguistics": {
+    "Biomedical": 173,
+    "Other": 25,
+    "CS/ML": 217,
+    "Physics": 49,
+    "Biology": 10,
+    "Social Science": 9,
+    "Finance": 4,
+    "Engineering": 4
+  },
+  "Conflict": {
+    "Biomedical": 1
+  }
+}

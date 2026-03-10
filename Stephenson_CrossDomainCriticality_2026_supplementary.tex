@@ -1,0 +1,117 @@
+\documentclass[11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{hyperref}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+}
+
+\title{Supplementary Material:\\Convergent Discovery of Critical Phenomena Mathematics Across Disciplines}
+
+\author{Bruce Stephenson \and Robin Macomber}
+
+\date{March 2026}
+
+\begin{document}
+
+\maketitle
+
+\section{Metatron Dynamics Operator Definitions}
+\label{sec:operators}
+
+The Metatron Dynamics framework composes four operators ($A$, $B$, $R$, $C$) into a composite evolution operator $E$. All operators act on discrete fields $x \in \mathbb{R}^n$ with circular boundary conditions.
+
+\medskip
+\noindent\textbf{A --- Gradient Extraction (symmetric):}
+\begin{equation}
+A(x)[i] = x[i] - \mathrm{mean}(x)
+\end{equation}
+Zero-sum ($\sum A(x)[i] = 0$), translation-invariant.
+
+\medskip
+\noindent\textbf{B --- Local Coupling (symmetric):}
+\begin{equation}
+B(x)[i] = x[i] + x[(i+1) \bmod n]
+\end{equation}
+Couples each element to its forward neighbor under circular boundary conditions.
+
+\medskip
+\noindent\textbf{R --- Antisymmetric Circulation:}
+\begin{equation}
+R(x, \rho)[i] = x[i] + \rho \bigl( x[(i{+}1) \bmod n] - x[(i{-}1) \bmod n] \bigr)
+\end{equation}
+Parameterized by circulation strength $\rho$. Breaks equilibrium symmetry; directional flow sustains coherent structures under iteration.
+
+\medskip
+\noindent\textbf{C --- Bounded Coherence:}
+\begin{equation}
+C(x)[i] = \frac{x[i]}{1 + |x[i]|}
+\end{equation}
+Saturating nonlinearity with bounded output ($|C(x)[i]| \leq 1$), sign-preserving.
+
+\medskip
+\noindent\textbf{E --- Composite Evolution:}
+\begin{equation}
+E(x, \rho) = C\bigl(R\bigl(B(A(x)),\, \rho\bigr)\bigr)
+\end{equation}
+In the linear regime ($|x| \ll 1$), the operators $A$, $B$, $R$ commute; ordering matters only through the position of the nonlinear operator $C$. Placing $C$ last (after $A$, $B$, $R$) allows the linear operators to build spectral structure before bounded compression.
+
+\subsection*{Criticality Detection via $\kappa_m$}
+
+The contraction factor $\kappa_m$ admits two equivalent formulations:
+
+\medskip
+\noindent\textbf{Spectral:}
+\begin{equation}
+\kappa_m = \lambda_{\max}(J_E)
+\end{equation}
+where $J_E$ is the Jacobian of $E$ and $\lambda_{\max}(\cdot)$ denotes the largest eigenvalue magnitude (spectral radius).
+
+\medskip
+\noindent\textbf{Geometric (Lipschitz constant):}
+\begin{equation}
+\kappa_m(x) = \lim_{\varepsilon \to 0} \frac{\|E(x+\varepsilon, \rho) - E(x, \rho)\|}{\|\varepsilon\|}
+\end{equation}
+
+\medskip
+Both yield the same classification:
+\begin{itemize}[nosep]
+\item $\kappa_m < 1$: contracting (perturbations decay)
+\item $\kappa_m \to 1$: critical (perturbations persist, $\tau \to \infty$)
+\item $\kappa_m > 1$: expanding (perturbations grow)
+\end{itemize}
+
+\section{Correspondence Test: Ising Model}
+\label{sec:ising_test}
+
+Using the 2D Ising model at $T_c = 2.269$ (Onsager 1944), we tested whether three $\kappa_m$ candidates---spatial ($\xi$-based), temporal ($\tau$-based), and composite ($\sqrt{\xi\tau}$)---correctly identify the critical point. Lattice: $32 \times 32$; 2000 equilibration sweeps; 200 samples per temperature.
+
+\begin{table}[ht]
+\centering
+\caption{Metatron Dynamics correspondence test results}
+\begin{tabular}{cccc}
+\toprule
+\textbf{$T$} & $\kappa_{m,\text{spatial}}$ ($\xi$) & $\kappa_{m,\text{temporal}}$ ($\tau$) & $\kappa_{m,\text{composite}}$ \\
+\midrule
+2.0 & 2.0 & 1.34 & 1.64 \\
+2.1 & 3.0 & 4.69 & 3.75 \\
+2.2 & 3.0 & 2.71 & 2.85 \\
+\textbf{2.269} & \textbf{5.0} & \textbf{18.60} & \textbf{9.64} \\
+2.3 & 4.0 & 4.94 & 4.45 \\
+2.4 & 4.0 & 14.80 & 7.69 \\
+2.5 & 4.0 & 6.35 & 5.04 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+All three candidates peak at $T = T_c$. Temporal correlation $\tau$ increases $14\times$ at the critical point, demonstrating critical slowing down. The temporal measure shows elevated variance at temperatures near $T_c$, consistent with finite-size effects on a $32 \times 32$ lattice; the secondary elevation at $T = 2.4$ illustrates why larger lattices are needed to establish a clean divergence profile. The $32 \times 32$ lattice is illustrative; standard errors are not reported for these 200 samples, and both full statistical characterization and direct computation of $\kappa_m = \lambda_{\max}(J_E)$ from the $E$ operator's Jacobian require larger lattices.
+
+\end{document}

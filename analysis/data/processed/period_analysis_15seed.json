@@ -1,0 +1,115 @@
+{
+  "1987--1995": {
+    "period": "1987--1995",
+    "total_known": 34,
+    "total_with_unknown": 37,
+    "same": 23,
+    "cross": 11,
+    "unknown": 3,
+    "unknown_rate": 0.081,
+    "obs_cross_rate": 0.3235,
+    "ci_95": [
+      0.1913,
+      0.4916
+    ],
+    "exp_cross_rate_hhi": 0.7266,
+    "chi2": 27.82,
+    "p_value": 1.334636545833101e-07,
+    "direction": "siloed",
+    "domain_counts": {
+      "Physics": 14,
+      "CS/ML": 6,
+      "Biomedical": 8,
+      "Unknown": 3,
+      "Biology": 2,
+      "Finance": 4
+    }
+  },
+  "1996--2005": {
+    "period": "1996--2005",
+    "total_known": 2281,
+    "total_with_unknown": 2369,
+    "same": 826,
+    "cross": 1455,
+    "unknown": 88,
+    "unknown_rate": 0.037,
+    "obs_cross_rate": 0.6379,
+    "ci_95": [
+      0.6179,
+      0.6574
+    ],
+    "exp_cross_rate_hhi": 0.8045,
+    "chi2": 402.78,
+    "p_value": 1.3639452313955637e-89,
+    "direction": "siloed",
+    "domain_counts": {
+      "CS/ML": 521,
+      "Biomedical": 246,
+      "Engineering": 75,
+      "Physics": 716,
+      "Biology": 287,
+      "Finance": 258,
+      "Unknown": 88,
+      "Other": 57,
+      "Social Science": 121
+    }
+  },
+  "2006--2015": {
+    "period": "2006--2015",
+    "total_known": 9969,
+    "total_with_unknown": 10532,
+    "same": 3112,
+    "cross": 6857,
+    "unknown": 563,
+    "unknown_rate": 0.053,
+    "obs_cross_rate": 0.6878,
+    "ci_95": [
+      0.6787,
+      0.6969
+    ],
+    "exp_cross_rate_hhi": 0.8412,
+    "chi2": 1754.76,
+    "p_value": 0.0,
+    "direction": "siloed",
+    "domain_counts": {
+      "Physics": 1919,
+      "Biology": 1043,
+      "CS/ML": 2553,
+      "Other": 531,
+      "Biomedical": 1126,
+      "Social Science": 481,
+      "Engineering": 1285,
+      "Finance": 1031,
+      "Unknown": 563
+    }
+  },
+  "2016--2026": {
+    "period": "2016--2026",
+    "total_known": 14110,
+    "total_with_unknown": 17349,
+    "same": 6272,
+    "cross": 7838,
+    "unknown": 3239,
+    "unknown_rate": 0.187,
+    "obs_cross_rate": 0.5555,
+    "ci_95": [
+      0.5473,
+      0.5637
+    ],
+    "exp_cross_rate_hhi": 0.7553,
+    "chi2": 3049.35,
+    "p_value": 0.0,
+    "direction": "siloed",
+    "domain_counts": {
+      "Unknown": 3239,
+      "Biomedical": 2539,
+      "CS/ML": 5896,
+      "Physics": 2072,
+      "Biology": 1187,
+      "Social Science": 292,
+      "Engineering": 945,
+      "Finance": 840,
+      "Other": 339
+    }
+  }
+}
