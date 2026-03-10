@@ -71,7 +71,7 @@ Statistical physics established the mathematical framework between 1944 and 1971
 
 Why did it take 15--50 years for equivalent techniques to appear elsewhere? The most parsimonious explanation is natural convergence: as complexity science, biomedicine, finance, and machine learning matured during the 1980s--2000s, researchers confronting correlation problems derived similar mathematics from first principles. Disciplinary barriers compound this---a physicist's ``correlation length'' and a financial analyst's ``Hurst exponent'' look like different things even when they diagnose the same critical regime.
 
-A notable prior synthesis is Sornette's 2004 textbook \cite{sornette2004}, which explicitly unified critical phenomena across natural sciences---applying statistical mechanics concepts to biology, economics, and geophysics. Scheffer et al.'s influential 2009 review \cite{scheffer2009} further demonstrated cross-domain applicability of early warning signals. That domain-specific literatures continued developing largely in parallel despite these works suggests that even high-quality synthesis faces adoption barriers across disciplinary boundaries. Our contribution is not the first cross-domain synthesis but rather quantitative documentation of the convergence pattern: tracing when and how awareness spread, and classifying each surveyed instance by type.
+The nonlinear dynamics community recognized universality across chaotic systems by the mid-1980s \cite{cvitanovic1984}; that applied communities continued independent derivation despite this recognition strengthens the convergence thesis. A notable prior synthesis is Sornette's 2004 textbook \cite{sornette2004}, which explicitly unified critical phenomena across natural sciences---applying statistical mechanics concepts to biology, economics, and geophysics. Scheffer et al.'s influential 2009 review \cite{scheffer2009} further demonstrated cross-domain applicability of early warning signals. That domain-specific literatures continued developing largely in parallel despite these works suggests that even high-quality synthesis faces adoption barriers across disciplinary boundaries. Our contribution is not the first cross-domain synthesis but rather quantitative documentation of the convergence pattern: tracing when and how awareness spread, and classifying each surveyed instance by type.
 
 Our investigation was prompted by a specific case of apparent independent derivation (Appendix~\ref{app:correspondence}): a framework developed in distributed systems engineering whose critical-point behavior resembled established physics. We document the broader convergence pattern the resulting literature search uncovered.
 
@@ -647,7 +647,7 @@ Saturating nonlinearity with bounded output ($|C(x)[i]| \leq 1$), sign-preservin
 \begin{equation}
 E(x, \rho) = C\bigl(R\bigl(B(A(x)),\, \rho\bigr)\bigr)
 \end{equation}
-The ordering $A \to B \to R \to C$ is structurally necessary; any permutation produces different dynamics.
+In the linear regime ($|x| \ll 1$), the operators $A$, $B$, $R$ commute; ordering matters only through the position of the nonlinear operator $C$. Placing $C$ last (after $A$, $B$, $R$) allows the linear operators to build spectral structure before bounded compression.
 
 \subsection*{Criticality Detection via $\kappa_m$}
 
