@@ -114,4 +114,15 @@ Using the 2D Ising model at $T_c = 2.269$ (Onsager 1944), we tested whether thre
 
 All three candidates peak at $T = T_c$. Temporal correlation $\tau$ increases $14\times$ at the critical point, demonstrating critical slowing down. The temporal measure shows elevated variance at temperatures near $T_c$, consistent with finite-size effects on a $32 \times 32$ lattice; the secondary elevation at $T = 2.4$ illustrates why larger lattices are needed to establish a clean divergence profile. The $32 \times 32$ lattice is illustrative; standard errors are not reported for these 200 samples, and both full statistical characterization and direct computation of $\kappa_m = \lambda_{\max}(J_E)$ from the $E$ operator's Jacobian require larger lattices.
 
+\section{Genesis of This Investigation}
+\label{sec:genesis}
+
+Metatron Dynamics originated in distributed systems engineering. Macomber independently derived a set of discrete operators for analyzing relational structure in computational networks. When Stephenson evaluated the framework in 2024, the operators' behavior at parameter boundaries---diverging convergence time, long-range correlation, sensitivity to perturbation---resembled critical phase transitions in statistical physics. Neither author had training in statistical mechanics. The resulting literature search revealed that at least six other fields had independently derived functionally corresponding mathematics with remarkably little cross-citation. Our framework is not the paper's thesis; it is the accident that revealed the thesis.
+
+The framework composes four operators into a composite evolution operator $E$ (definitions in Section~\ref{sec:operators}). The contraction factor $\kappa_m$ governs three regimes: contracting ($\kappa_m < 1$), critical ($\kappa_m \to 1$), and expanding ($\kappa_m > 1$). An illustrative correspondence test using the 2D Ising model is presented in Section~\ref{sec:ising_test}.
+
+\subsection*{Disclosure}
+
+As authors of both the framework and this survey, we disclose our dual role. External validation would strengthen any independence claim. We intend to commercialize under the Metatron Dynamics name; no external funding has been received and no revenue has been generated as of this writing. We have excluded the framework from the main text's domain count, tables, and classification taxonomy to prevent our dual role from contaminating the survey's independence.
+
 \end{document}

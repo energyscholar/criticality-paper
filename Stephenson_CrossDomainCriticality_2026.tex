@@ -9,6 +9,7 @@
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage[authoryear,round]{natbib}
+\setcitestyle{aysep={}}
 \usepackage{array}
 \usepackage{booktabs}
 \usepackage{enumitem}
@@ -34,16 +35,18 @@
     citecolor=blue,
 }
 
-\title{Convergent Discovery of Critical Phenomena Mathematics Across Disciplines: A Cross-Domain Analysis}
+\title{Convergent Discovery of Critical Phenomena Mathematics Across Disciplines\thanks{Formatted for submission to \textit{FACETS} (Canadian Science Publishing) as a Perspectives article. Supplementary Material available.}}
 
 \author{
-    Bruce Stephenson\thanks{Author contributions: BS (convergence thesis, cross-domain analysis, manuscript writing), RM (Metatron Dynamics framework, correspondence testing, technical review)} \\
-    \textit{Independent Researcher} \\
-    \texttt{energyscholar@gmail.com}
+    Bruce Stephenson\thanks{Corresponding author: \texttt{energyscholar@gmail.com}}\thanks{CRediT author contributions: BS (Conceptualization, Investigation, Formal Analysis, Writing -- Original Draft, Writing -- Review \& Editing, Visualization), RM (Methodology, Software, Writing -- Review \& Editing)} \\
+    \textit{Independent Researcher, Albany, Oregon, USA} \\
+    \texttt{energyscholar@gmail.com} \\
+    ORCID: \href{https://orcid.org/0009-0005-6842-6686}{0009-0005-6842-6686}
     \and
     Robin Macomber \\
-    \textit{Independent Researcher} \\
-    \texttt{relationalrelativity@gmail.com}
+    \textit{Independent Researcher, Lompoc, California, USA} \\
+    \texttt{relationalrelativity@gmail.com} \\
+    ORCID: \href{https://orcid.org/0009-0002-2843-8568}{0009-0002-2843-8568}
 }
 
 \date{March 2026}
@@ -58,16 +61,26 @@
 \begin{abstract}
 Techniques for detecting critical phenomena---phase transitions where correlation length diverges and small perturbations have large effects---have been developed across multiple fields over nine decades. We survey between six and twelve disciplines (depending on classification criteria) where researchers derived functionally corresponding measures of correlation scaling, with little documented awareness of each other's work. The physicist's correlation length $\xi$, the cardiologist's DFA scaling exponent $\alpha$, the financial analyst's Hurst exponent $H$, and the machine learning engineer's spectral radius $\chi$ all detect critical signatures under different notation.
 
-We classify each surveyed domain as independent derivation, domain transfer, or empirical precursor, and present citation network evidence that cross-domain citations remained significantly below random-mixing expectations (under a simple null model of domain mixing) during the formative period (1987--2010). The framework that motivated this investigation---derived from distributed systems engineering and presented in Section~\ref{sec:genesis}---is excluded from the survey count given the authors' dual role.
+We classify each surveyed domain as independent derivation, domain transfer, or empirical precursor, and present citation network evidence that cross-domain citations remained significantly below random-mixing expectations (under a simple null model of domain mixing) during the formative period (1987--2010). The framework that motivated this investigation---derived from distributed systems engineering and presented in the Supplementary Material---is excluded from the survey count given the authors' dual role.
 
-Building on prior syntheses---notably Sornette's 2004 textbook---this paper contributes an honest taxonomy of discovery types and quantitative documentation of the convergence pattern. Because these findings affect fields beyond mathematics and physics, a plain-language summary is maintained at \url{https://freethemath.org}; non-specialist readers may wish to start there.
+Building on prior syntheses---notably Sornette's 2004 textbook---this paper contributes a taxonomy of discovery types and quantitative documentation of the convergence pattern.
 \end{abstract}
 
-\noindent\textbf{Keywords:} critical phenomena, phase transitions, convergent discovery, correlation analysis, detrended fluctuation analysis, Hurst exponent
+\noindent\textbf{Key words:} critical phenomena, phase transitions, convergent discovery, correlation analysis, detrended fluctuation analysis, Hurst exponent
 
 \subsection*{Plain Language Summary}
 
-Scientists in at least six different fields---physics, cardiology, finance, computer science, traffic engineering, and power grid engineering---independently invented the same mathematics for detecting when complex systems are about to fail catastrophically. They did this over nine decades, mostly without knowing about each other's work. A physicist's ``correlation length,'' a financial analyst's ``Hurst exponent,'' and a computer scientist's ``spectral radius'' turn out to measure the same thing: how close a system is to a critical transition where small perturbations trigger cascading failure. This paper documents that convergence pattern, classifies each case, and presents citation evidence that knowledge transfer between fields was minimal. A fuller plain-language treatment is maintained at \url{https://freethemath.org}.
+\noindent\textit{Plain language title: Scientists in different fields independently invented the same failure-prediction math}
+
+\medskip
+
+When a complex system---a heart, a power grid, a financial market, a climate system---approaches a catastrophic transition, its behavior changes in predictable ways. Small disturbances take longer to die out. Distant parts of the system begin to move in sync. Fluctuations grow. Scientists have developed mathematical tools to detect these warning signs and predict when a system is nearing a tipping point.
+
+What is remarkable is that researchers in at least six different fields invented essentially the same mathematics for this purpose, over nine decades, mostly without knowing about each other's work. A physicist measuring ``correlation length,'' a cardiologist computing a ``DFA scaling exponent,'' a financial analyst calculating a ``Hurst exponent,'' and a machine learning engineer tuning a ``spectral radius'' are all answering the same question: how close is this system to a critical transition? Their tools detect the same signatures---growing correlations, slowing recovery, increasing sensitivity---using different notation developed independently within each discipline.
+
+This paper surveys between six and twelve fields (depending on how strictly one counts) where this convergent discovery occurred. We classify each case as independent invention, adaptation from another field, or an early empirical observation that predated the formal mathematics. We also analyze citation networks---who cited whom---and find that cross-field awareness was remarkably low during the key period from 1987 to 2010, even though the techniques were functionally equivalent.
+
+The convergence has practical implications. Insights from one domain can transfer to another: a power grid engineer can learn from how cardiologists detect cardiac risk, and climate scientists' tipping-point models share mathematical structure with financial crash prediction. Documenting this pattern is a step toward breaking down the disciplinary barriers that kept these communities working in parallel for decades.
 
 \section{Introduction}
 \label{sec:intro}
@@ -82,7 +95,7 @@ characterizes fluctuations at separation $r$, with correlation length $\xi$ dive
 
 We document a recurring pattern of convergence in the discovery process itself: researchers across multiple disciplines derived functionally corresponding measures of correlation scaling---often without awareness of each other's work. A physicist measuring $\xi$, a cardiologist computing detrended fluctuation analysis (DFA) scaling exponent $\alpha$, a quant calculating Hurst exponent $H$, and a machine learning engineer tuning spectral radius $\chi$ are performing functionally equivalent calculations under different notation.
 
-How did this convergence occur? Based on the evidence pattern, we assess natural convergence as a parsimonious explanation consistent with the evidence---similar problems yielding similar solutions---rather than coordinated dissemination. Section~\ref{sec:evidence} presents citation network evidence bearing on this question.
+The physics of universality---that systems in the same symmetry class share critical exponents---is well established. Our contribution is different: we document the \textit{discovery process} by which practitioners outside physics independently arrived at functionally corresponding diagnostics, classify each case, and present quantitative citation evidence bearing on whether this reflects knowledge transfer or independent derivation. The sociology of science has long recognized simultaneous independent discovery as a recurring phenomenon \citep{merton1961}; we provide a specific, quantitatively documented case. Section~\ref{sec:evidence} presents the citation network evidence.
 
 \subsection{Historical Context}
 
@@ -96,7 +109,7 @@ The nonlinear dynamics community recognized universality across chaotic systems 
 
 A notable prior synthesis is Sornette's 2004 textbook \citep{sornette2004}, which explicitly unified critical phenomena across natural sciences---applying statistical mechanics concepts to biology, economics, and geophysics. \citeauthor{scheffer2009}'s influential review \citep{scheffer2009} further demonstrated cross-domain applicability of early warning signals. That domain-specific literatures continued developing largely in parallel despite these works suggests that even high-quality synthesis faces adoption barriers across disciplinary boundaries. Our contribution is not the first cross-domain synthesis but rather quantitative documentation of the convergence pattern: tracing when and how awareness spread, and classifying each surveyed instance by type.
 
-Our investigation was prompted by a specific case of apparent independent derivation (Section~\ref{sec:genesis}): a framework developed in distributed systems engineering whose critical-point behavior resembled established physics. We document the broader convergence pattern the resulting literature search uncovered.
+Our investigation was prompted by a specific case of apparent independent derivation (see Supplementary Material): a framework developed in distributed systems engineering whose critical-point behavior resembled established physics. We document the broader convergence pattern the resulting literature search uncovered.
 
 \subsection{Definitions and Scope}
 \label{sec:definitions}
@@ -144,7 +157,7 @@ Sornette (2004) & Prior cross-domain synthesis & Textbook treatment \\
 
 The scope of this paper is a historical survey of convergent discovery, supported by citation network analysis. We do not claim mathematical proof of universal equivalence; we document a pattern and present evidence bearing on whether it reflects independent derivation or knowledge transfer.
 
-Between six and twelve of the domains surveyed represent convergent discovery, depending on how strictly one defines ``independent derivation.'' Six domains---Kauffman's edge of chaos, biomedical signal analysis, neuroscience, machine learning, power grid analysis, and traffic flow (Kerner)---present the clearest cases for independent development, though with qualifications noted for each. Including domain transfers (finance, urban scaling), empirical precursors (seismology, linguistics), and climate/thermohaline circulation expands the count to twelve (Table~\ref{tab:classification}). Bak's SOC and Sornette's prior synthesis are classified separately. The authors' own framework (Section~\ref{sec:genesis}), which motivated this survey, is presented separately and excluded from this count.
+Between six and twelve of the domains surveyed represent convergent discovery, depending on how strictly one defines ``independent derivation.'' Six domains---Kauffman's edge of chaos, biomedical signal analysis, neuroscience, machine learning, power grid analysis, and traffic flow (Kerner)---present the clearest cases for independent development, though with qualifications noted for each. Including domain transfers (finance, urban scaling), empirical precursors (seismology, linguistics), and climate/thermohaline circulation expands the count to twelve (Table~\ref{tab:classification}). Bak's SOC and Sornette's prior synthesis are classified separately. The authors' own framework (Supplementary Material), which motivated this survey, is presented separately and excluded from this count.
 
 \section{Cross-Domain Discoveries}
 \label{sec:discoveries}
@@ -164,6 +177,7 @@ Onsager's exact solution to the 2D Ising model \citep{onsager1944} identified th
 Bak, Tang, and Wiesenfeld (1987) introduced self-organized criticality (SOC) \citep{bak1987}, showing that complex systems spontaneously evolve toward critical states. Avalanche sizes follow power laws $P(s) \sim s^{-\tau}$---the same divergence of correlation structure that characterizes continuous phase transitions. Kauffman's ``Origins of Order'' \citep{kauffman1993} identified the edge of chaos in Boolean networks: ordered ($K < 2$), critical ($K \approx 2$), chaotic ($K > 2$). Maximal computational capability occurs at $K = 2$, where correlation length diverges---$K$ serves as a tuning parameter analogous to temperature.
 
 \subsection{Biomedical/HRV Analysis (1994)}
+\label{sec:biomedical}
 
 \noindent\textit{Classification: qualified independent derivation. Peng and collaborators derived DFA from first principles for DNA sequence analysis, but the group was led by H.\ Eugene Stanley, a statistical physicist. The methodology is original; the intellectual lineage to physics is not fully severed.}
 \smallskip
@@ -225,7 +239,7 @@ At $\chi \approx 1$, networks achieve maximum computational capability through c
 
 \citet{beggs2003} recorded local field potentials in rat cortical slices and found that spontaneous activity propagates as neuronal avalanches with size distribution $P(s) \sim s^{-3/2}$---matching the mean-field critical branching prediction. At criticality, neural networks achieve maximal dynamic range, optimal information transmission, and the largest repertoire of activity patterns.
 
-The ``criticality hypothesis''---that the brain operates near a critical point for computational advantage---has since become a major research program. DFA applied to EEG and MEG data connects directly to the biomedical scaling analysis of Section~2.3. As with DFA in cardiology, the approach converged on criticality mathematics from domain-specific empirical observation rather than from deliberate application of statistical mechanics.
+The ``criticality hypothesis''---that the brain operates near a critical point for computational advantage---has since become a major research program. DFA applied to EEG and MEG data connects directly to the biomedical scaling analysis of Section~\ref{sec:biomedical}. As with DFA in cardiology, the approach converged on criticality mathematics from domain-specific empirical observation rather than from deliberate application of statistical mechanics.
 
 \subsection{Power Grid Analysis (2000s--2010s)}
 
@@ -252,11 +266,11 @@ Kerner's three-phase model (2004) \citep{kerner2004} formalized this as a genuin
 
 \citet{stommel1961} introduced a two-box model of thermohaline circulation exhibiting bistability---the Atlantic Meridional Overturning Circulation (AMOC) can occupy either a strong or collapsed equilibrium, with hysteresis preventing smooth recovery. This was among the earliest applications of bifurcation analysis to a geophysical system.
 
-\citet{schmidt_mysak1996} demonstrated that zonally averaged thermohaline models exhibit multiple equilibria structured as cusp catastrophes---the same geometric object appearing in Van der Pol oscillators and Kauffman's NK fitness landscapes. \citet{wang_mysak2006} showed that Dansgaard-Oeschger oscillations in paleoclimate records correspond to stochastic switching near a Hopf bifurcation in the meridional overturning circulation, with irregular periods characteristic of critical slowing down---the same signature that DFA detects in cardiac time series.
+\citet{schmidt_mysak1996} demonstrated that zonally averaged thermohaline models exhibit a pitchfork bifurcation---the symmetric two-cell circulation loses stability as diffusivity increases, giving way to asymmetric one-cell patterns. \citet{wang_mysak2006} showed that Dansgaard-Oeschger oscillations in paleoclimate records correspond to stochastic switching near a Hopf bifurcation in the meridional overturning circulation, with irregular periods characteristic of critical slowing down---the same signature that DFA detects in cardiac time series.
 
 \citet{rahmstorf2005}, in an intercomparison of eleven independent climate models, found that all exhibited the same hysteresis loop for AMOC response to freshwater forcing---convergent discovery \textit{within} a single domain, paralleling the cross-domain convergence this paper documents. \citet{lenton2008} synthesized these results into a tipping elements framework for the climate system, citing both Rahmstorf and the broader bifurcation literature.
 
-The chain from climate science to the methods surveyed here closes through \citet{bury2021}, who trained deep learning classifiers on normal form bifurcation data---saddle-node, Hopf, transcritical---and demonstrated that these classifiers generalize across ecology, climate, and cardiology without domain-specific retraining. \citet{bury2023} validated the approach on experimental chick-heart aggregate data---a cardiac system originally studied by Glass and collaborators \citep{mackey_glass1977}---using training data from the same bifurcation normal forms that govern AMOC tipping points. Bury's lineage traces through \citeauthor{scheffer2009}'s (\citeyear{scheffer2009}) bridging review to \citet{wissel1984}, who documented characteristic return time near thresholds in ecology---a pre-Scheffer articulation of critical slowing down---and to \citeauthor{gardiner1983}'s (\citeyear{gardiner1983}) stochastic processes handbook, which formalized the mathematical tools both ecologists and physicists would independently adopt. The mathematical structure connecting these domains was always there; practitioners in each field developed their diagnostics independently.
+The chain from climate science to the methods surveyed here closes through \citet{dakos2012}, who provided a systematic toolbox for detecting early warning signals across ecological and climate systems, and \citet{bury2021}, who trained deep learning classifiers on normal form bifurcation data---saddle-node, Hopf, transcritical---and demonstrated that these classifiers generalize across ecology, climate, and cardiology without domain-specific retraining. \citet{bury2023} validated the approach on experimental chick-heart aggregate data---a cardiac system originally studied by Glass and collaborators \citep{mackey_glass1977}---using training data from the same bifurcation normal forms that govern AMOC tipping points. Bury's lineage traces through \citeauthor{scheffer2009}'s (\citeyear{scheffer2009}) bridging review to \citet{wissel1984}, who documented characteristic return time near thresholds in ecology---a pre-Scheffer articulation of critical slowing down---and to \citeauthor{gardiner1983}'s (\citeyear{gardiner1983}) stochastic processes handbook, which formalized the mathematical tools both ecologists and physicists would independently adopt. The mathematical structure connecting these domains was always there; practitioners in each field developed their diagnostics independently.
 
 A concrete illustration: Mysak and Glass are both emeritus professors at McGill University, both Fellows of the Royal Society of Canada, and both played in the same faculty orchestra. Mysak has noted that he ``sometimes meet[s] Leon Glass on the bus and then I can talk about our `related' work'' (personal communication, 2026). They did not know their research used the same bifurcation mathematics until an outside investigator connected them. The convergence pattern this paper documents is not an abstraction---it persists even at the scale of a single university bus route.
 
@@ -296,7 +310,7 @@ A clear contrast case is Moore and Mertens' work on phase transitions in computa
 
 Cross-domain awareness emerges primarily after 2010: ML papers begin citing complexity science, econophysics bridges finance and physics. This delayed integration supports natural convergence---each domain developed independently, with cross-fertilization coming after maturation.
 
-Quantitative citation analysis confirms this pattern. Analyzing forward citations of 15 seed papers across six Semantic Scholar--resolvable domains (28{,}591 unique citing papers), we find cross-domain citation rates consistently below the random-mixing null model in every period ($p < 0.0001$; Table~\ref{tab:citations}). Cross-domain rates rise modestly from 64\% (1996--2005) to 69\% (2006--2015) before declining to 56\% (2016--2026); the recent decline likely reflects the high rate of unclassified papers in Semantic Scholar's recent records (19\% unknown in 2016--2026 vs.\ 4\% in 1996--2005). The consistently siloed pattern---observed rates 15--20 percentage points below random-mixing expectations---supports independent development rather than cross-pollination.
+Quantitative citation analysis confirms this pattern. We selected seed papers as the foundational or most-cited methodological contribution in each domain (e.g., Onsager for physics, Peng for DFA, Peters for finance)---choosing papers that defined a technique rather than papers likely to attract cross-domain attention. Analyzing forward citations of these 15 seed papers across six Semantic Scholar--resolvable domains (28{,}591 unique citing papers), we find cross-domain citation rates consistently below the random-mixing null model in every period ($p < 0.0001$; Table~\ref{tab:citations}). Cross-domain rates rise modestly from 64\% (1996--2005) to 69\% (2006--2015) before declining to 56\% (2016--2026); the recent decline likely reflects the high rate of unclassified papers in Semantic Scholar's recent records (19\% unknown in 2016--2026 vs.\ 4\% in 1996--2005). The consistently siloed pattern---observed rates 15--20 percentage points below random-mixing expectations---supports independent development rather than cross-pollination.
 
 \begin{table}[ht]
 \centering
@@ -316,17 +330,17 @@ Quantitative citation analysis confirms this pattern. Analyzing forward citation
 \noindent\footnotesize{*** $p < 0.0001$. Null model: expected cross-domain rate $= 1 - \sum p_i^2$ (Herfindahl index) where $p_i$ is domain share. Data from Semantic Scholar API (28{,}591 unique citing papers). Two papers truncated at 62--66\% of total citations due to API rate limits. The 1987--1995 period ($N = 34$) is omitted due to insufficient sample size. Papers with no Semantic Scholar field classification (13.6\% overall, 19\% in 2016--2026) are excluded; see sensitivity analysis in text.}
 \end{table}
 
-This null model assumes unrestricted mixing across domains. In practice, journal scope constraints, reviewer pool segmentation, and field-specific citation norms reduce expected cross-citation rates below the random-mixing baseline. A more restrictive null---for example, a block model conditioned on journal co-occurrence---would likely still show significant clustering but with reduced effect sizes. We therefore interpret the chi-squared results as strong evidence for domain clustering, while acknowledging that the magnitude of departure from expectation is an upper bound.
+This null model assumes unrestricted mixing across domains---a deliberate simplification. In practice, journal scope constraints, reviewer pool segmentation, and field-specific citation norms reduce expected cross-citation rates below the random-mixing baseline. A more restrictive null---for example, a stochastic block model conditioned on journal co-occurrence or a gravity model incorporating disciplinary distance---would likely still show significant clustering but with reduced effect sizes. We therefore interpret the chi-squared results as evidence for domain clustering consistent with the qualitative evidence (absent citations, independent notation, institutional separation), while acknowledging that the magnitude of departure from the HHI expectation is an upper bound on the ``true'' clustering effect.
 
 To bound the effect of unclassified papers (13.6\% overall, 19\% in 2016--2026), we computed worst- and best-case cross-domain rates by assigning all unknowns to same-domain or cross-domain respectively: the 2016--2026 rate ranges from 45.2\% to 63.8\%, compared to 55.5\% observed, and all periods remain significantly below the null expectation. Merging Biology and Biomedical into a single domain---the most aggressive reasonable consolidation---reduces cross-domain rates modestly (e.g., 55.5\% $\to$ 43.7\% in 2016--2026) but preserves significant siloing in every period. The core finding is robust to both perturbations.
 
-Notably, Sornette's cross-domain synthesis textbook \citep{sornette2004} was itself primarily cited within physics (cross-domain rate: 36\%), suggesting that even explicit synthesis faces adoption barriers. Domain classifications use Semantic Scholar's algorithmic \texttt{fieldsOfStudy} mapped to six broad categories; additional seed papers from seismology, linguistics, urban science, and other sub-domains were excluded from the quantitative table due to missing field classifications but contribute narrative evidence in Section~\ref{sec:discoveries}.
+Notably, Sornette's cross-domain synthesis textbook \citep{sornette2004} was itself primarily cited within physics (cross-domain rate: 36\%), suggesting that even explicit synthesis faces adoption barriers. Domain classifications use Semantic Scholar's algorithmic \texttt{fieldsOfStudy} mapped to six broad categories. These classifications are imperfect---S2 assigns fields based on venue and content signals, not expert curation---but represent the best available large-scale classification. We validated spot-checks against manual inspection and found reasonable agreement for the broad categories used here. Additional seed papers from seismology, linguistics, urban science, and other sub-domains were excluded from the quantitative table due to missing field classifications but contribute narrative evidence in Section~\ref{sec:discoveries}.
 
 \subsection{Notation Divergence}
 
 Each domain developed its own notation for the same underlying mathematics, with no terminological inheritance between them. Statistical physics measures correlation length $\xi$ and critical exponents $\nu$, $\eta$. In cardiology, DFA introduced scaling exponent $\alpha$; financial analysts adopted the Hurst exponent $H$ from hydrology. Machine learning settled on spectral radius $\chi$ for recurrent network dynamics. Traffic engineers characterize transitions through critical density $\rho_c$.
 
-None of these notation systems show terminological inheritance from each other---a physicist would not recognize $\alpha$ as diagnosing the same critical regime as $\xi$ without careful analysis, nor would a financial analyst connect $H$ to $\chi$. This contrasts with deliberate transfer cases: Moore and Mertens (2011), applying phase transition theory to computational complexity, explicitly preserved the statistical mechanics language of ``order parameters'' and ``critical thresholds.'' Notation divergence is the expected signature of independent derivation; notation preservation signals knowledge transfer. The contrast with calculus is instructive: Leibniz's and Newton's distinct notations eventually consolidated into shared vocabulary across every field. No comparable consolidation has occurred for criticality.\footnote{Bury (personal communication, 2026) notes that practitioners moving between fields must learn each domain's vocabulary independently.}
+None of these notation systems show terminological inheritance from each other---a physicist would not recognize $\alpha$ as diagnosing the same critical regime as $\xi$ without careful analysis, nor would a financial analyst connect $H$ to $\chi$. This contrasts with deliberate transfer cases: Moore and Mertens (2011), applying phase transition theory to computational complexity, explicitly preserved the statistical mechanics language of ``order parameters'' and ``critical thresholds.'' Notation divergence is the expected signature of independent derivation; notation preservation signals knowledge transfer. The contrast with calculus is instructive: Leibniz's and Newton's distinct notations eventually consolidated into shared vocabulary across every field. No comparable consolidation has occurred for criticality (cf.\ Bury, personal communication, 2026).\footnote{Bury (personal communication, 2026) notes that practitioners moving between fields must learn each domain's vocabulary independently.}
 
 \subsection{Institutional Separation}
 
@@ -365,6 +379,7 @@ ML & $\chi$ & Spectral radius & Recurrent weight stability & $\chi \approx 1$ \\
 HRV & $\alpha_1$ & Short-term DFA exponent & Autonomic regulation index & $\alpha_1 \approx 0.75$\rlap{$^*$} \\
 Traffic & $\rho_c$ & Critical density & Flow-density phase boundary & Phase transition \\
 \midrule
+\multicolumn{5}{l}{\textit{Empirical scaling exponents (power-law distributions, not correlation-decay diagnostics):}} \\
 Seismology & $b$ & $b$-value (Gutenberg--Richter) & Frequency-magnitude scaling exponent & $b \approx 1$ \\
 Linguistics & $\gamma$ & Zipf exponent & Word rank-frequency scaling & $\gamma \approx 1$ \\
 Urban science & $\beta$ & City scaling exponent & Superlinear scaling with population & $\beta > 1$ (innovation) \\
@@ -464,34 +479,25 @@ Terminology standardization---developing shared vocabulary across domains---rema
 
 The functional correspondence we document is phenomenological---parameters detect similar critical signatures without necessarily being mathematically interconvertible in all cases. The rigorous equivalence $\alpha = H$ for fractional Gaussian noise (Section~\ref{sec:equiv_chain}) does not automatically extend to all process types. Power-law behavior can arise from mechanisms other than criticality; our claim is that these techniques \textit{converge} when applied to critical systems, not that all power laws indicate criticality. Sornette's Dragon King theory \citep{sornette2009dragonking, sornette2012dragonking} identifies important exceptions---predictable outliers generated by positive feedback rather than scale-free criticality.
 
-Our citation analysis cannot rule out informal knowledge transfer. The quantitative evidence supports but does not prove independent derivation. We also note a scope limitation: broadening ``criticality'' beyond equilibrium phase transitions to include non-equilibrium SOC, long-memory stochastic processes, and algorithmic stability boundaries increases the risk that convergence becomes definitional rather than empirical. We have attempted to mitigate this by classifying each domain's relationship to the formal framework (Table~\ref{tab:classification}) and by restricting our strongest claims to cases where the mathematical correspondence is demonstrable.
+Our citation analysis cannot rule out informal knowledge transfer. The quantitative evidence supports but does not prove independent derivation. We also note a scope limitation: broadening ``criticality'' beyond equilibrium phase transitions to include non-equilibrium SOC, long-memory stochastic processes, and algorithmic stability boundaries increases the risk that convergence becomes definitional rather than empirical. Our inclusion criterion is mathematical form---parameters that diagnose diverging correlation structure near a transition point---not the label ``criticality.'' We have attempted to mitigate definitional drift by classifying each domain's relationship to the formal framework (Table~\ref{tab:classification}), by distinguishing correlation-decay diagnostics from empirical scaling exponents (Table~\ref{tab:equiv}), and by restricting our strongest claims to cases where the mathematical correspondence is demonstrable.
 
 Our survey expanded from an initial nine domains to twelve after a single round of AI-assisted literature search beyond the original manual survey. That one additional pass yielded three new domains (seismology, linguistics, urban scaling) suggests the convergence pattern is broader than documented here. A systematic review---beyond this paper's scope---would likely identify further instances.
 
 \section*{Acknowledgments}
 
-The authors acknowledge Genevieve Prentice for accessibility architecture and public understanding methodology. We thank colleagues who provided valuable feedback on earlier drafts.
+The authors acknowledge Genevieve Prentice for accessibility architecture and public understanding methodology. We thank colleagues who provided valuable feedback on earlier drafts. Personal communications from Lawrence Mysak and Thomas Bury are cited with their permission.
 
-This work was prepared with assistance from AI tools (Claude, Anthropic), which aided in literature search, technical writing, document formatting, revision strategy, and voice analysis. All scientific insights, the convergence thesis, cross-domain analysis, and discovery classifications originate from the authors' independent research. The authors retain full responsibility for content and conclusions.
+This work was prepared with assistance from AI tools (Claude, Anthropic), which aided in literature search, technical writing, document formatting, and revision strategy. All scientific insights, the convergence thesis, cross-domain analysis, and discovery classifications originate from the authors' independent research. The authors retain full responsibility for content and conclusions.
 
-\textit{Conflict of interest:} The authors are developers of the Metatron Dynamics framework discussed in Section~\ref{sec:genesis}. This framework motivated the literature search underlying this survey. We intend to commercialize this framework; as of this writing, no company has been formed, no external funding has been received, and no revenue has been generated. This dual role---framework authors and survey authors---is disclosed throughout the paper, and the framework is presented separately to reflect this.
+\textit{Funding:} This research received no external funding.
+
+\textit{Conflict of interest:} The authors are developers of the Metatron Dynamics framework discussed in the Supplementary Material. This framework motivated the literature search underlying this survey. We intend to commercialize this framework; no external funding has been received and no revenue has been generated as of the date of submission. This dual role---framework authors and survey authors---is disclosed throughout the paper, and the framework is presented separately to reflect this.
 
 \subsection*{Data Availability}
 
-Citation data were retrieved from the Semantic Scholar API (public tier). Analysis code and processed data are available at [repository URL to be added prior to submission].
+Citation data were retrieved from the Semantic Scholar API (public tier). Analysis code and processed data are available from the corresponding author on request.
 
 \bibliographystyle{apalike}
 \bibliography{Stephenson_CrossDomainCriticality_2026}
-
-\section{Genesis of This Investigation}
-\label{sec:genesis}
-
-Metatron Dynamics originated in distributed systems engineering. Macomber independently derived a set of discrete operators for analyzing relational structure in computational networks. When Stephenson evaluated the framework in 2024, the operators' behavior at parameter boundaries---diverging convergence time, long-range correlation, sensitivity to perturbation---resembled critical phase transitions in statistical physics. Neither author had training in statistical mechanics. The resulting literature search revealed that at least six other fields had independently derived functionally corresponding mathematics with remarkably little cross-citation. Our framework is not the paper's thesis; it is the accident that revealed the thesis.
-
-The framework composes four operators into a composite evolution operator $E$ (definitions in Supplementary Material). The contraction factor $\kappa_m$ governs three regimes: contracting ($\kappa_m < 1$), critical ($\kappa_m \to 1$), and expanding ($\kappa_m > 1$). An illustrative correspondence test using the 2D Ising model is presented in the Supplementary Material.
-
-\subsection*{Disclosure}
-
-As authors of both the framework and this survey, we disclose our dual role. External validation would strengthen any independence claim. We intend to commercialize under the Metatron Dynamics name; no company has been formed and no revenue generated as of this writing. We have excluded the framework from the main text's domain count, tables, and classification taxonomy to prevent our dual role from contaminating the survey's independence.
 
 \end{document}
