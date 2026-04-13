@@ -14,17 +14,18 @@
 \usepackage{booktabs}
 \usepackage{enumitem}
 \usepackage{setspace}
-\usepackage[mathlines]{lineno}
+% \usepackage[mathlines]{lineno}  % disabled for arXiv (line numbers not allowed)
+\setcounter{secnumdepth}{0}
 
-% Fix lineno + amsmath compatibility
-\newcommand*\patchAmsMathEnvironmentForLineno[1]{%
-  \expandafter\let\csname old#1\expandafter\endcsname\csname #1\endcsname
-  \expandafter\let\csname oldend#1\expandafter\endcsname\csname end#1\endcsname
-  \renewenvironment{#1}%
-    {\linenomath\csname old#1\endcsname}%
-    {\csname oldend#1\endcsname\endlinenomath}}%
-\patchAmsMathEnvironmentForLineno{equation}
-\patchAmsMathEnvironmentForLineno{align}
+% Fix lineno + amsmath compatibility (disabled for arXiv)
+% \newcommand*\patchAmsMathEnvironmentForLineno[1]{%
+%   \expandafter\let\csname old#1\expandafter\endcsname\csname #1\endcsname
+%   \expandafter\let\csname oldend#1\expandafter\endcsname\csname end#1\endcsname
+%   \renewenvironment{#1}%
+%     {\linenomath\csname old#1\endcsname}%
+%     {\csname oldend#1\endcsname\endlinenomath}}%
+% \patchAmsMathEnvironmentForLineno{equation}
+% \patchAmsMathEnvironmentForLineno{align}
 
 % Hyperref setup
 \hypersetup{
@@ -56,7 +57,7 @@
 \maketitle
 \thispagestyle{plain}
 \doublespacing
-\linenumbers
+% \linenumbers  % disabled for arXiv
 
 \begin{abstract}
 Techniques for detecting critical phenomena---phase transitions where correlation length diverges and small perturbations have large effects---have been developed across multiple fields over nine decades. We survey between six and twelve disciplines (depending on classification criteria) where researchers derived functionally corresponding measures of correlation scaling, with little documented awareness of each other's work. The physicist's correlation length $\xi$, the cardiologist's DFA scaling exponent $\alpha$, the financial analyst's Hurst exponent $H$, and the machine learning engineer's spectral radius $\chi$ all detect critical signatures under different notation.

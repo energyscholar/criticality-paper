@@ -8,19 +8,28 @@
 
 ## FILES TO UPLOAD
 
-Upload TWO files individually (do NOT use tar.gz — it fails on Check Files):
+**Option A (preferred): Upload tar.gz archive**
 
+```
+/home/bruce/software/criticality-paper/arxiv-v3-upload.tar.gz
+```
+
+Contains: .tex + .bbl + anc/supplementary.pdf (no directory entries in tar).
+This delivers the supplementary material to arXiv readers.
+
+**Option B (fallback): Upload files individually**
+
+Upload .tex then .bbl as two separate files:
 ```
 /home/bruce/software/criticality-paper/Stephenson_CrossDomainCriticality_2026.tex
 /home/bruce/software/criticality-paper/Stephenson_CrossDomainCriticality_2026.bbl
 ```
+Supplementary PDF cannot be included with individual uploads — provide to FACETS directly.
 
-Use .bbl (pre-compiled bibliography), NOT .bib. The .bbl is self-contained and
-skips BibTeX — more reliable on arXiv.
-
-Supplementary PDF is NOT uploaded to arXiv (tar.gz with anc/ directory fails
-repeatedly). The paper text already references supplementary material; we will
-provide it to FACETS directly. The arXiv Comments field notes its existence.
+**Note:** Use .bbl (pre-compiled bibliography), NOT .bib. The .bbl skips the
+BibTeX step on arXiv servers. All 6 prior upload failures (2026-03-16) were
+server-side ("Exception in processing") — same error for tar.gz, .tex+.bib,
+and .tex+.bbl. Not a file problem.
 
 ---
 
@@ -86,9 +95,9 @@ physics.soc-ph
 
 1. Go to https://arxiv.org/user/ → find 2601.22389 → click **Replace**
 2. Delete All existing files if any are listed from a previous attempt
-3. Upload the .tex file, then upload the .bbl file (2 separate uploads)
-4. Click **Check Files** — should show both files, no errors
-5. Proceed to **Process** — let arXiv compile the .tex + .bib into PDF
+3. Upload arxiv-v3-upload.tar.gz (Option A). If Check Files fails, clear and try Option B.
+4. Click **Check Files** — should show files listed, no errors
+5. Proceed to **Process** — let arXiv compile the .tex + .bbl into PDF
 6. Verify compiled PDF renders correctly (26 pages, 4 tables)
 7. **Metadata**: paste fields from above (title, authors, abstract, comments, MSC, category)
 8. **Preview**: verify title, abstract, author list, check compiled PDF
@@ -117,7 +126,7 @@ physics.soc-ph
 
 ## BUILD VERIFICATION (2026-03-16)
 
-- Compilation: **clean, 0 warnings, 0 undefined references**
+- Compilation: **clean, 11 warnings (all benign hyperref/footnote), 0 undefined references**
 - Pages: **26** (double-spaced, line-numbered)
 - Tables: **4** (classification, citations, equivalence, timeline)
 - Figures: **0**
@@ -147,3 +156,4 @@ physics.soc-ph
 | AI disclosure | ✓ |
 | Data availability | ✓ |
 | Supplementary material referenced in text | ✓ |
+| Unnumbered headings | ✓ secnumdepth=0 |
